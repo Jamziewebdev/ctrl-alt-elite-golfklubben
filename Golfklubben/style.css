@@ -44,6 +44,9 @@ body {
 
 /* */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     /* Anger att layoutmönstret innuti containern header ska vara 
     flexbox. */
     display: flex;
@@ -56,21 +59,22 @@ header {
     objekten vertikalt */
     align-items: center;
     background-color: #34775a;
+    box-shadow:  0 5px 20px -2px #000000;
+    
 }
 
 header img {
     /* "flyter" headerbilden till vänster */
     float: left;
-    /* Marginal runt loggan */
-    margin: 6px;
     /* En färgad skugga bakom bilden. Vet inte riktigt vad jag tycker om
     denna men låter den ligga kvar så länge */
-    filter: drop-shadow(0 0 15px #ffb938);
+    height: 50px;
+
 }
 
 header img:hover {
     /* Ändrar färg på skuggan vid hovring */
-    filter: drop-shadow(0 0 15px #ffffff);
+    filter: drop-shadow(0 0 10px #102b3d);
 }
 
 
@@ -79,6 +83,7 @@ det lediga utrymmet i headern. Alltså utrymmet som blir över efter logotypen o
 dess padding.*/
 nav {
     flex: 1;
+
 }
 
 /* Länkarna, dvs knapparna, i navigationscontainern */
@@ -93,19 +98,14 @@ nav a {
     typ understreck och blå färg */
     text-decoration: none;
     /* sätter padding över och under till 18 pixlar, 
-    och höger och vänster till 14 pixlar.*/
-    padding: 18px 14px;
-    border-radius: 6px;
-    /* Sätter ingen marginal över eller under då detta redan 
-    lösts av align-items i headerstilarna. Men sätter 5 pixlar 
-    på sidorna av knapparna vilket ger sammanlagt 10 pixlar mellan 
-    varje navigationslänk */
-    margin: 0 5px;
+    och höger och vänster till 25 pixlar.*/
+    padding: 18px 25px;
+
 }
 
 nav a:hover {
-    /* Vid hovring får navigationslänkarna en skugga */
-    filter: drop-shadow(0 0 20px #ffffff);
+    /* Vid hovring får navigationslänkarna en färg */
+    background-color: #22577A;
 }
 
 nav a.active {
@@ -114,8 +114,64 @@ nav a.active {
     background-color: #22577A;
 }
 
-h1 {
-    font-size: 2em;
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/vyer/hero.jpg");
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-content img {
+    margin-bottom: 30px;
+    height: 200px;
+    filter: drop-shadow(0 0 20px #000);
+}
+
+.hero-content button {
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    font-size: 1.5em;
+    margin: 5px;
+    border-radius: 30px;
+    display: inline-block;
+    width: 200px;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: #34775a;
+    box-shadow: inset 0 0 20px #0b1a14;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px black;
+    
+}
+
+.hero-content button:hover {
+    background-color: #22577A;
+
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+
 }
 
 h2 {
@@ -137,8 +193,7 @@ h3 {
     width: 100%;
     /* Ställer in höjden till 100% av parent container, dvs main */
     height: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 5px;
 }
 
 main {
@@ -146,6 +201,7 @@ main {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    row-gap: 5px;
 }
 
 
@@ -158,7 +214,6 @@ article {
     border-radius: 10px;
     padding: 10px;
     height: 100%;
-    margin-bottom: 5px;
     width: 100%;
 }
 
@@ -234,18 +289,22 @@ input[type=email] {
 }
 
 input[type=submit] {
-    background-color: #80ED99;
-    padding: 8px 16px;
-    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #34775a;
+    box-shadow: inset 0 0 15px #0b1a14;
+    padding: 10px 25px;
+    border-radius: 30px;
     margin-top: 10px;
-    font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
 }
 
 input[type=submit]:hover {
-    background-color: #34775a;
-    border: 2px solid black;
-    color: #fff;
+    background-color: #C7F9CC;
+    color: #000;
+    text-shadow: none;
+
 
 }
 
