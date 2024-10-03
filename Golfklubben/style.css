@@ -1,0 +1,253 @@
+*   {
+    /* Återställer marginaler, padding och border till 0. (vissa webbläsare har
+    förutbestämda värden som man måste återställa) */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* Värdet border-box gör så att bredden och höjden på ett element inkluderar 
+    padding och border, istället för att lägga dem utanför. Alltså t.ex. om man har 
+    ett element/container som har height och width 100 pixlar, och sedan lägger till
+    5 pixlar border, så läggs detta inuti elementet istället för att "växa" utåt.
+    Därmed behåller elementet sin storlek och det blir enklare att hålla ordning på
+    sina objekts storlek.  */
+    box-sizing: border-box;
+    /* Ställer in automatiskt avstånd mellan kolumner till 10 pixlar. */
+    column-gap: 10px;
+    /* Ett värde för ordbrytning, man får prova olika för att komma fram till vilken 
+    man tycker är bäst */
+    word-break: break-word;
+}
+
+
+body {
+    /* Ställer in standard-fontstorleken till 14px. Därefter kan man använda sig av
+    em istället. Så t.ex. om jag vill h2-rubriker ska vara 1.2 gånger så stor som 
+    standardstorleken skriver jag font-size: 1.2em. Även negativa nummer fungerar. 
+    Detta handlar om responsivitet, och vi kan gå in mer djupt på det om inte Nevena 
+    gör det nu under veckan eller början på nästa */
+    font-size: 14px;
+    /* Här har jag alltså använt em för att sätta radavståndet till 1.5 x textstorleken */
+    line-height: 1.5em;
+    color: black;
+    /* justerar alla element som finns inuti body så att de är centrerade både 
+    horisontellt och lodrätt. */
+    justify-content: center;
+    align-items: center;
+    background-color: #C7F9CC;
+    /* Väljer flex-layout och riktningen kollumn, så att alla element inuti body 
+    lägger sig i en lodrät linje. Detta gäller dock inte element som är innuti den första
+    nivån av element, vilket kommer att bli tydligt längr ner. */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* */
+header {
+    /* Anger att layoutmönstret innuti containern header ska vara 
+    flexbox. */
+    display: flex;
+    /* Flex direction row innebär att alla objekt i containern header
+    radar upp sig i horisontellt */
+    flex-direction: row;
+    /* Täcker skärmen från sida till sida */
+    width: 100%;
+    /* När man använder align items: center i flexbox så centreras
+    objekten vertikalt */
+    align-items: center;
+    background-color: #34775a;
+}
+
+header img {
+    /* "flyter" headerbilden till vänster */
+    float: left;
+    /* Marginal runt loggan */
+    margin: 6px;
+    /* En färgad skugga bakom bilden. Vet inte riktigt vad jag tycker om
+    denna men låter den ligga kvar så länge */
+    filter: drop-shadow(0 0 15px #ffb938);
+}
+
+header img:hover {
+    /* Ändrar färg på skuggan vid hovring */
+    filter: drop-shadow(0 0 15px #ffffff);
+}
+
+
+/* Att sätta flex: 1 på navigationscontainern gör så att navigationsfältet tar upp
+det lediga utrymmet i headern. Alltså utrymmet som blir över efter logotypen och 
+dess padding.*/
+nav {
+    flex: 1;
+}
+
+/* Länkarna, dvs knapparna, i navigationscontainern */
+nav a {
+    /* "flyter" alla knappar åt höger */
+    float: right;
+    color: #ffffff;
+    /* En liten textskugga för att öka läsbarheten */
+    text-shadow: 1px 1px 3px black;
+    font-size: 20px;
+    /* Tar bort webbläsarens default-stilar för länkar,
+    typ understreck och blå färg */
+    text-decoration: none;
+    /* sätter padding över och under till 18 pixlar, 
+    och höger och vänster till 14 pixlar.*/
+    padding: 18px 14px;
+    border-radius: 6px;
+    /* Sätter ingen marginal över eller under då detta redan 
+    lösts av align-items i headerstilarna. Men sätter 5 pixlar 
+    på sidorna av knapparna vilket ger sammanlagt 10 pixlar mellan 
+    varje navigationslänk */
+    margin: 0 5px;
+}
+
+nav a:hover {
+    /* Vid hovring får navigationslänkarna en skugga */
+    filter: drop-shadow(0 0 20px #ffffff);
+}
+
+nav a.active {
+    /* När en navigationslänk är vald, alltså den länk som motsvarar
+    den sida man just nu är på, så blir den blå.*/
+    background-color: #22577A;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #34775a;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+#wrapper {
+    /* Mittenjusterar innehållet i wrappern */
+    justify-content: center;
+    align-items: center;
+    /* Ställer in bredden till 100% av container */
+    width: 100%;
+    /* Ställer in höjden till 100% av parent container, dvs main */
+    height: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+article {
+    /* Vänder här flex-layouten till en rad istället. Så att sektionerna jag lägger 
+    in hamnar sida vid sida */
+    display: flex;
+    flex-direction: row;
+    background-color: #e6ffe8;
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+article section {
+    /* justerar så att objekten i artikelsektioner lägger sig på varandra istället för 
+    bredvid */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* Tar upp 100% av ledigt utrymme */
+    width: 100%;
+    padding: 10px;
+}
+
+
+footer {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    background-color: #22577A;
+    width: 100%;
+    bottom: 0;
+    position:static;
+    justify-content: center;
+    color: #fff;
+    column-gap: 20px;
+    /* En liten textskugga för att öka läsbarheten */
+    text-shadow: 1px 1px 3px black;
+    padding: 20px;
+}
+
+
+footer img {
+    margin: 15px;
+    filter: drop-shadow(0 0 5px #ffffff);
+}
+
+
+footer img:hover {
+    /* Större skugga när man hovrar */
+    filter: drop-shadow(0 0 15px #ffffff);
+}
+
+footer a {
+    color: #ffffff;
+    /* Tar bort webbläsarens default-stilar för länkar,
+    typ understreck och blå färg */
+    text-decoration: none;
+    text-align: left;
+}
+
+footer a:hover {
+    filter: drop-shadow(0 0 4px #ffffff);
+}
+
+
+footer section {
+    /* Här byter jag ut tidigare sektionsstilar för att inte ta med t.ex. den vita 
+    bakgrunden från artikelsektionerna. */
+    border: none;
+    width: 100%;
+    background: none;
+}
+
+
+input[type=email] {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px 10px;
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+input[type=submit] {
+    background-color: #80ED99;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+input[type=submit]:hover {
+    background-color: #34775a;
+    border: 2px solid black;
+    color: #fff;
+
+}
+
+address {
+    text-align: left;
+}
