@@ -40,14 +40,19 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* */
 header {
+    color:#111;
     position: sticky;
     top: 0;
     z-index: 100;
-    /* Anger att layoutmönstret innuti containern header ska vara 
+    padding:25px 0;
+    /* Anger att layoutmönstret inuti containern header ska vara 
     flexbox. */
     display: flex;
     /* Flex direction row innebär att alla objekt i containern header
@@ -58,63 +63,67 @@ header {
     /* När man använder align items: center i flexbox så centreras
     objekten vertikalt */
     align-items: center;
-    background-color: #34775a;
-    box-shadow:  0 5px 20px -2px #000000;
+    background-color: white;
     
 }
 
 header img {
-    /* "flyter" headerbilden till vänster */
-    float: left;
-    /* En färgad skugga bakom bilden. Vet inte riktigt vad jag tycker om
-    denna men låter den ligga kvar så länge */
-    height: 50px;
+    height: 20px;
 
 }
 
 header img:hover {
     /* Ändrar färg på skuggan vid hovring */
-    filter: drop-shadow(0 0 10px #102b3d);
 }
 
 
 /* Att sätta flex: 1 på navigationscontainern gör så att navigationsfältet tar upp
 det lediga utrymmet i headern. Alltså utrymmet som blir över efter logotypen och 
 dess padding.*/
-nav {
-    flex: 1;
 
-}
+
 
 /* Länkarna, dvs knapparna, i navigationscontainern */
 nav a {
+    color:inherit;
     /* "flyter" alla knappar åt höger */
-    float: right;
-    color: #ffffff;
     /* En liten textskugga för att öka läsbarheten */
-    text-shadow: 1px 1px 3px black;
-    font-size: 20px;
+    font-size: 0.9rem;
     /* Tar bort webbläsarens default-stilar för länkar,
     typ understreck och blå färg */
     text-decoration: none;
     /* sätter padding över och under till 18 pixlar, 
     och höger och vänster till 25 pixlar.*/
-    padding: 18px 25px;
-
+    padding: 18px 15px;
+    position:relative;
 }
 
 nav a:hover {
     /* Vid hovring får navigationslänkarna en färg */
-    background-color: #22577A;
+    color: #13486b;
+    
+}
+nav a:hover::before {
+    width:100%;
+}
+nav a::before{
+    transition:.3s;
+    content:"";
+    width:0;
+    height:2px;
+    background:#13486b;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 nav a.active {
     /* När en navigationslänk är vald, alltså den länk som motsvarar
     den sida man just nu är på, så blir den blå.*/
-    background-color: #22577A;
+    color: #22577A;
 }
 
-/* OBS att alla stilar relaterade till hero är för startsidan  */
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/vyer/hero.jpg");
     width: 100%;
@@ -123,6 +132,14 @@ nav a.active {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+.hero-overlay{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
 }
 
 .hero-content {
@@ -137,53 +154,61 @@ nav a.active {
 .hero-content img {
     margin-bottom: 30px;
     height: 200px;
-    filter: drop-shadow(0 0 20px #000);
 }
 
 .hero-content button {
-    font-family: 'Times New Roman', Times, serif;
     border: none;
-    font-size: 1.5em;
+    font-size: 0.9rem;
     margin: 5px;
-    border-radius: 30px;
+    border-radius: 5px;
     display: inline-block;
-    width: 200px;
-    padding: 10px 25px;
+    font-family: 'Poppins', sans-serif;
+    width: 150px;
+    padding: 14px 25px;
     color: #fff;
     background-color: #34775a;
-    box-shadow: inset 0 0 20px #0b1a14;
     text-align: center;
     cursor: pointer;
-    text-shadow: 1px 1px 3px black;
+    transition:.3s;
+
     
 }
 
 .hero-content button:hover {
-    background-color: #22577A;
+    background-color: #34614d;
 
 }
 
 .hero-content p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+
 }
 
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 20px;
-    color: #fff;
 
 }
 
 h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    border-bottom: 1px solid #34775a;
+    margin:15px 0 40px;
+    display:inline-block;
 }
 
 h3 {
     font-size: 1.3em;
     margin-bottom: 5px;
+}
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 #wrapper {
@@ -243,7 +268,6 @@ footer {
     color: #fff;
     column-gap: 20px;
     /* En liten textskugga för att öka läsbarheten */
-    text-shadow: 1px 1px 3px black;
     padding: 20px;
 }
 
@@ -290,7 +314,6 @@ input[type=email] {
 }
 
 input[type=submit] {
-    font-family: 'Times New Roman', Times, serif;
     background-color: #34775a;
     box-shadow: inset 0 0 15px #0b1a14;
     padding: 10px 25px;
