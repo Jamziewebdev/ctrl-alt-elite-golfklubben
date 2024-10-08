@@ -1,0 +1,325 @@
+*   {
+    /* Återställer marginaler, padding och border till 0. (vissa webbläsare har
+    förutbestämda värden som man måste återställa) */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* Värdet border-box gör så att bredden och höjden på ett element inkluderar 
+    padding och border, istället för att lägga dem utanför. Alltså t.ex. om man har 
+    ett element/container som har height och width 100 pixlar, och sedan lägger till
+    5 pixlar border, så läggs detta inuti elementet istället för att "växa" utåt.
+    Därmed behåller elementet sin storlek och det blir enklare att hålla ordning på
+    sina objekts storlek.  */
+    box-sizing: border-box;
+    /* Ställer in automatiskt avstånd mellan kolumner till 10 pixlar. */
+    column-gap: 10px;
+    /* Ett värde för ordbrytning, man får prova olika för att komma fram till vilken 
+    man tycker är bäst */
+    word-break: break-word;
+}
+
+
+body {
+    /* Ställer in standard-fontstorleken till 14px. Därefter kan man använda sig av
+    em istället. Så t.ex. om jag vill h2-rubriker ska vara 1.2 gånger så stor som 
+    standardstorleken skriver jag font-size: 1.2em. Även negativa nummer fungerar. 
+    Detta handlar om responsivitet, och vi kan gå in mer djupt på det om inte Nevena 
+    gör det nu under veckan eller början på nästa */
+    font-size: 14px;
+    /* Här har jag alltså använt em för att sätta radavståndet till 1.5 x textstorleken */
+    line-height: 1.5em;
+    color: black;
+    /* justerar alla element som finns inuti body så att de är centrerade både 
+    horisontellt och lodrätt. */
+    justify-content: center;
+    align-items: center;
+    background-color: #C7F9CC;
+    /* Väljer flex-layout och riktningen kollumn, så att alla element inuti body 
+    lägger sig i en lodrät linje. Detta gäller dock inte element som är innuti den första
+    nivån av element, vilket kommer att bli tydligt längr ner. */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* */
+header {
+    color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 25px 0;
+    /* Anger att layoutmönstret innuti containern header ska vara 
+    flexbox. */
+    display: flex;
+    /* Flex direction row innebär att alla objekt i containern header
+    radar upp sig i horisontellt */
+    flex-direction: row;
+    /* Täcker skärmen från sida till sida */
+    width: 100%;
+    /* När man använder align items: center i flexbox så centreras
+    objekten vertikalt */
+    align-items: center;
+    background-color: white;
+}
+
+header img {
+    height: 20px;
+}
+
+/* Länkarna, dvs knapparna, i navigationscontainern */
+nav a {
+    color: inherit;
+    font-size: 0.9rem;
+    /* Tar bort webbläsarens default-stilar för länkar,
+    typ understreck och blå färg */
+    text-decoration: none;
+    /* sätter padding över och under till 18 pixlar, 
+    och höger och vänster till 15 pixlar.*/
+    padding: 18px 15px;
+    position: relative;
+}
+
+nav a:hover {
+    /* Vid hovring får navigationslänkarna en färg */
+    color: #13486b;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a::before {
+    transition:.3s;
+    content:"";
+    width:0;
+    height:2px;
+    background:#13486b;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+nav a.active {
+    /* När en navigationslänk är vald, alltså den länk som motsvarar
+    den sida man just nu är på, så blir den blå.*/
+    color: #22577A;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin: 15px 0 40px;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+#wrapper {
+    /* Mittenjusterar innehållet i wrappern */
+    justify-content: center;
+    align-items: center;
+    /* Ställer in bredden till 100% av container */
+    width: 100%;
+    /* Ställer in höjden till 100% av parent container, dvs main */
+    height: 100%;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    row-gap: 5px;
+}
+
+article {
+    /* Vänder här flex-layouten till en rad istället. Så att sektionerna jag lägger 
+    in hamnar sida vid sida */
+    display: flex;
+    flex-direction: row;
+    background-color: #e6ffe8;
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+article section {
+    /* justerar så att objekten i artikelsektioner lägger sig på varandra istället för 
+    bredvid */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* Tar upp 100% av ledigt utrymme */
+    width: 100%;
+    padding: 10px;
+}
+
+/*styling för formulärens utseende.*/
+.form {
+    width: 500px;
+    border: solid 2px;
+    border-radius: 15px;
+    padding: 20px;
+    border-color: #38A3A5;
+    background-color: #e6ffe8;
+    margin: auto;
+    margin-top: 30px;
+    filter: drop-shadow(0 0 15px black);
+}
+
+/*Ändrar utseende på input-text fälten i formulären.*/
+#textrutor {
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/*Gör input-text fältet för meddelande större än de andra input fälten för att mer 
+text ska få plats.*/
+#meddelande {
+    width: 300px;
+    padding: 5px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+}
+
+#submit-button {
+    background-color: #22577A;
+    color: white;
+}
+
+#submit-button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/*Centrerar innehållet i diven med knappen i och läggen till lite utrymme under den.*/
+.bokning {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Styling på knappen för att komma till bokningen. Gör den större än submit-knapparna i 
+formulären för att den ska vara mer synlig för användarna.*/
+.button-bokning {
+    padding: 10px;
+    background-color: #22577A;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 28px;
+    box-shadow: inset 0 0 10px black;
+    text-shadow: 1px 1px 3px black;
+}
+
+/*När man hovrar över bokningsknappen blir det mer tydligt att man kan trycka på den 
+genom att pekaren ändras och ramen blir mer synlig och texten ändrar färg.*/
+.button-bokning:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+}
+
+footer {
+    flex: 4;
+    background-color: #22577A;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: static;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+}
+
+footer p, address {
+    margin: 0, 0.3rem;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.shortcuts a:hover {
+    border-bottom: 1px solid #e6ffe8;
+}
+
+.social-media h4 {
+    margin-bottom: 8px;
+}
+.social-media {
+    width: 120px;
+    height: 120px;
+
+}
+
+
+    /* Skugga när man hovrar */
+.social-media img:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.newsform input[type=email] {
+    width: 90%;
+    margin: 5px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #5e5e5e;
+}
+
+.newsform input[type=submit] {
+    display: inline-block;
+    font-family: 'Poppins', Times, serif;
+    background-color: #34775a;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px black;
+    transition: .3s;
+}
+
+.newsform input[type=submit]:hover {
+    background-color: #34614d;
+} 
+
