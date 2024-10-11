@@ -1,0 +1,382 @@
+*   {
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    column-gap: 10px;
+    word-break: break-word;
+}
+
+
+body {
+
+    font-size: 14px;
+    line-height: 1.5em;
+    color: black;
+
+    justify-content: center;
+    align-items: center;
+    background-color: #C7F9CC;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* */
+header {
+    color:#111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding:25px 0;
+    /* Anger att layoutmönstret inuti containern header ska vara 
+    flexbox. */
+    display: flex;
+    /* Flex direction row innebär att alla objekt i containern header
+    radar upp sig i horisontellt */
+    flex-direction: row;
+    /* Täcker skärmen från sida till sida */
+    width: 100%;
+    /* När man använder align items: center i flexbox så centreras
+    objekten vertikalt */
+    align-items: center;
+    background-color: white;
+    
+}
+
+header img {
+    height: 20px;
+
+}
+
+
+
+
+/* Att sätta flex: 1 på navigationscontainern gör så att navigationsfältet tar upp
+det lediga utrymmet i headern. Alltså utrymmet som blir över efter logotypen och 
+dess padding.*/
+
+
+
+/* Länkarna, dvs knapparna, i navigationscontainern */
+nav a {
+    color:inherit;
+    /* "flyter" alla knappar åt höger */
+    /* En liten textskugga för att öka läsbarheten */
+    font-size: 0.9rem;
+    /* Tar bort webbläsarens default-stilar för länkar,
+    typ understreck och blå färg */
+    text-decoration: none;
+    /* sätter padding över och under till 18 pixlar, 
+    och höger och vänster till 25 pixlar.*/
+    padding: 18px 15px;
+    position:relative;
+}
+
+nav a:hover {
+    /* Vid hovring får navigationslänkarna en färg */
+    color: #13486b;
+    
+}
+nav a:hover::before {
+    width:100%;
+}
+nav a::before{
+    transition:.3s;
+    content:"";
+    width:0;
+    height:2px;
+    background:#13486b;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+nav a.active {
+    /* När en navigationslänk är vald, alltså den länk som motsvarar
+    den sida man just nu är på, så blir den blå.*/
+    color: #22577A;
+}
+
+
+.hero-image {
+    
+  background-image:   url('img/vyer/gallery1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.hero-image h1 {
+    font-size: 3rem; /* Stor rubrik */
+    margin-bottom: 20px;
+
+
+
+}
+.hero-image button {
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #13486b;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero-image button:hover {
+    background-color: #090a0a; /* Ändrar färg vid hover */
+
+}
+#wrapper {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    row-gap: 5px;
+}
+
+
+article {
+    background-color: #ffffff;
+    padding: 0 5px 5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+    .part1 {
+        display: flex;           /* Använder flexbox */
+        justify-content: center; /* Centrerar innehållet horisontellt */
+        gap: 20px;               /* Lägger till mellanrum mellan elementen */
+    }
+    
+    .medal {
+        border: 1px solid #ddd;  /* Valfri stil, t.ex. kant runt varje block */
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .img img {
+        width: 300px;            /* Justera bildstorleken */
+        height: 300px;
+    }
+
+.text {
+  background-color: #f4f4f4; /* Lätt bakgrundsfärg för att framhäva texten */
+  border-radius: 8px; /* Rundade hörn */
+  padding: 20px; /* Ger utrymme mellan texten och kantlinjerna */
+  margin: 20px 0; /* Utrymme mellan textblocken */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
+}
+
+.text h1 {
+  color: #b29900; /* Guldaktig färg för rubriken */
+  font-size: 32px; /* Stor rubrik */
+  font-weight: bold; /* Fetstil för att framhäva rubriken */
+  margin-bottom: 15px; /* Utrymme under rubriken */
+}
+.text h2 {
+    color:  #C0C0C0; /* Guldaktig färg för rubriken */
+    font-size: 32px; /* Stor rubrik */
+    font-weight: bold; /* Fetstil för att framhäva rubriken */
+    margin-bottom: 15px; /* Utrymme under rubriken */
+}
+
+.text h3 {
+    color: #Cd7f32; /* Guldaktig färg för rubriken */
+    font-size: 32px; /* Stor rubrik */
+    font-weight: bold; /* Fetstil för att framhäva rubriken */
+    margin-bottom: 15px; /* Utrymme under rubriken */
+}
+.text p {
+  color: #333; /* Mörk textfärg för bra kontrast */
+  font-size: 16px; /* Standardstorlek på brödtext */
+  line-height: 1.6; /* Bra radavstånd för läsbarhet */
+  margin-bottom: 15px; /* Mellanrum mellan stycken */
+}
+
+.text p::before {
+  content: "✓ "; /* Symbol för att markera varje punkt */
+  color: #b29900; /* Guldfärg för symbolen */
+  font-weight: bold; /* Fetstil för symbolen */
+}
+.medlem{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rubrik */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Grundläggande stil för formulär */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fältset-styling */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Legend-styling */
+legend {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Formulärfälten */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Radioknappens stil */
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Knappar */
+button {
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Anpassningar för textområden */
+textarea {
+    resize: vertical;
+}
+
+
+
+footer {
+    flex: 4;
+    background-color: #22577A;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position:static;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+}
+
+footer p, address {
+    margin: 0, 0.3rem;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.shortcuts a:hover {
+    border-bottom: 1px solid #e6ffe8;
+}
+
+.social-media h4 {
+    margin-bottom: 8px;
+}
+.social-media {
+    width: 120px;
+    height: 120px;
+
+}
+
+
+    /* Skugga när man hovrar */
+.social-media img:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.newsform input[type=email] {
+    width: 90%;
+    margin: 5px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #5e5e5e;
+}
+
+.newsform input[type=submit] {
+    display: inline-block;
+    font-family: 'Poppins', Times, serif;
+    background-color: #34775a;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px black;
+    transition: .3s;
+}
+
+.newsform input[type=submit]:hover {
+    background-color: #34614d;
+} 
