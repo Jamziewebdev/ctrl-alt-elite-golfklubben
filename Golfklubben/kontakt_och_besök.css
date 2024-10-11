@@ -177,6 +177,17 @@ article section {
     padding: 10px;
 }
 
+/*Mittcentrerar porträtten och lägger till lite padding under den*/
+.jobbar section img{
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+/*Mittcentrerar texten i presentationerna*/
+.jobbar {
+    text-align: center;
+}
+
 /*styling för formulärens utseende.*/
 .form {
     width: 500px;
@@ -210,6 +221,10 @@ text ska få plats.*/
 #submit-button {
     background-color: #22577A;
     color: white;
+    height: 44px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 #submit-button:hover {
