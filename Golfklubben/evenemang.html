@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
+    <title>Elite Golf - Evenemang & Tävlingar</title>
+    <link rel="icon" type="image/x-icon" href="/img/logotyp/golfboll.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp Elite golf"></a>
+            <nav>
+                <a href="restaurang.html">Restaurang & Shop</a>
+                <a href="medlem.html">Medlem</a>
+                <a href="om.html">Om oss</a>
+                <a href="boka.html">Boka</a>
+                <a href="evenemang.html">Evenemang & Tävlingar</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+    <div id="wrapper">
+        <main id="event">
+            <!-- Page Header -->
+            <section id="main-header">
+                <h1>Tävlingar & Evenemang</h1>
+            </section>
+            <!-- Upcoming Events Section -->
+            <section id="upcoming-events">
+                <h2>Kommande Evenemang</h2>
+                <ul>
+                    <li>
+                        <h3>Golfturnering Maj 2024</h3>
+                        <p>Datum: 25 Maj 2024</p>
+                        <p>Plats: Green Valley Golfbana</p>
+                    </li>
+                    <li>
+                        <h3>Sommar Cup 2024</h3>
+                        <p>Datum: 12 Juni 2024</p>
+                        <p>Plats: Sunset Golf Club</p>
+                    </li>
+                </ul>
+            </section>
+            <!-- Past Competitions Section -->
+            <section id="past-competitions">
+                <h2>Tidigare Tävlingar</h2>
+                <ul>
+                    <li>
+                        <h3>Vårturnering 2024</h3>
+                        <p>Datum: 10 April 2024</p>
+                        <p>Resultat: <a href="resultat.html">Se resultat</a></p>
+                    </li>
+                    <li>
+                        <h3>Vintercupen 2023</h3>
+                        <p>Datum: 5 December 2023</p>
+                        <p>Resultat: <a href="resultat.html">Se resultat</a></p>
+                    </li>
+                </ul>
+            </section>
+            <!-- Registration Form -->
+            <section id="registration-form">
+                <h2>Anmäl dig till ett Evenemang</h2>
+                <form action="#" method="post">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="event">Välj evenemang:</label>
+                <select id="event" name="event">
+                    <option value="maj-turnering">Golfturnering Maj 2024</option>
+                    <option value="sommar-cup">Sommar Cup 2024</option>
+                </select>
+                <button type="submit">Anmäl dig</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="shortcuts">
+                <h4>Genvägar</h4>
+                <p><a href="index.html">Start</a></p>
+                <p><a href="medlem.html">Medlem</a></p>
+                <p><a href="om.html">Om oss</a></p>
+                <p><a href="boka.html">Boka</a></p>
+                <p><a href="evenemang.html">Evenemang & Tävlingar</a></p>
+                <p><a href="kontakt.html">Kontakt</a></p>
+            </div>
+            <div class="newsform">
+                <h4>Nyhetsbrev</h4>
+                <p>Skriv upp dig för att bli uppdaterad med senaste nytt!</p>
+                <form>
+                    <label for="email">
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="exempel@exempel.se">
+                    <input type="submit" value="Prenumerera">
+                </form>
+            </div>
+            <div class="details">
+                <h4>Besök oss:</h4>
+                <address>
+                    Golfvägen 1,<br>
+                    123 45 Staden
+                </address>
+            <h4>Kontakta oss:</h4>
+            <p>
+                Telefon: 070 123 45 67<br>
+                Mail: låtsas@låtsas.se
+            </p>
+            <h4>Öppettider:</h4>
+            <p> Mån-Fre: 07.00-18.00 <br>
+                Lör: 07.00-20.00 <br>
+                Sön: 08.00-15.00</p>
+            </div>
+            <div class="social-media">
+                <h4>Sociala medier</h4>
+                <p>
+                    <a href="#"><img src="img/ikoner/facebook.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/instagram.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/twitter.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/linkedin.svg" height="44" alt=""></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

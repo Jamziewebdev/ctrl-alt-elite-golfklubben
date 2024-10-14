@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
     <title>Elite Golf - Start</title>
+    <link rel="icon" type="image/x-icon" href="/img/logotyp/golfboll.svg">
 </head>
 <body>
     <header>
@@ -20,53 +24,99 @@
             </nav>
         </div>
     </header>
-    <div class="hero-image">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Välkommen till Elite golfklubb!</h1>
-            <h2>Vi är en anrik golfklubb </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti aliquid eligendi consectetur harum illo fugit et impedit quia odit, 
-                consequatur est voluptas expedita ipsum at repellendus voluptatibus aperiam iste voluptatum.
-            </p>
-            <button>Bli medlem</button> <button>Boka</button>
-        </div>
-    </div>
+
     <div id="wrapper">
-        <main>
+        <main id="start">
+            <div class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Välkommen till Elite golfklubb!</h1>
+                    <h2>Vi är en anrik golfklubb </h2>
+                    <p>
+                        Välkommen till Elite Golf – där passion möter natur. Njut av en rund på vår välvårdade bana, 
+                        omgiven av grönskande skogar och glittrande vatten. Oavsett om du är en erfaren golfspelare 
+                        eller nybörjare, erbjuder vi en upplevelse utöver det vanliga. Boka din runda idag och upptäck 
+                        varför Elite Golf är det perfekta valet för din nästa golfrunda.
+                    </p>
+                    <button>Bli medlem</button> <button>Boka</button>
+                </div>
+            </div>
             <article>
                 <h2>Nyhetsflöde</h2>
                 <div class="newsfeed">
-                    <section id="summer">
+                    <section class="news-item">
                         <h3>Sommarschemat är här! &#127774;</h3>
-                        <p>Vårt späckade sommarschema är här! Njut av längre speltider, 
-                            roliga tävlingar och härliga after work-häng. 
-                            Och du missar väl inte våra populära kvällsrundor?</p>
+                        <time datetime="2024-05-14 07:23">Publicerat: 14 Maj 2024, klockan 07:23</time>
+                        <hr>
+                            <p>
+                                Vårt späckade sommarschema är här! Njut av längre speltider, 
+                                roliga tävlingar och härliga after work-häng. 
+                                Och du missar väl inte våra populära kvällsrundor?</p>
                             <img src="img/vyer/summerpic.jpg" alt="En golfbana på sommaren">
-                            <button><a href="#">Bokningskalender</button></a><button><a href="#">Evenemang</a></button>
+                        <div>
+                            <button><a href="#">Läs mer</a></button><button><a href="#">Bokning</a></button><button><a href="#">Evenemang</a></button>
+                        </div>
                     </section>
-                    <section>
+                    <section class="news-item">
                         <h3>Klubbmästerskap &#9971;</h3>
-                        <p>Är du redo att koras till klubbmästare? Anmälan till årets mest prestigefyllda tävling är öppen! 
-                            Tävla mot andra golfentusiaster och vinn fina priser.</p>
+                        <time datetime="2024-05-10 12:39">Publicerat: 10 Maj 2024, klockan 12:39</time>
+                        <hr>
+                        <p>Är du redo att koras till klubbmästare? Anmälan till årets mest prestigefyllda tävling är öppen nu! 
+                            Tävla mot andra golfentusiaster och vinn fina priser, delta i aktiviteter och ät god mat!</p>
+                        <img src="img/vyer/tavling.jpg" alt="Person som slår ut en golfboll ur sandgropen">
+                        <div>
+                            <button><a href="#">Läs mer</a></button><button><a href="#">Bokning</a></button><button><a href="#">Evenemang</a></button>
+                        </div>
                     </section>
-                    <section>
-                        <h3>Nyhet 3</h3>
-                        
+                    <section class="news-item">
+                        <h3>Veckans meny &#127860;</h3>
+                        <time datetime="2024-05-07 10:01">Publicerat: 07 Maj 2024, klockan 10:01</time>
+                        <hr>
+                        <p>Nu kan du ta del av veckans lunchmeny på restaurangen! Som vanligt finns det alternativ för alla.
+                            Extra bra pris för dig som är medlem! Kvällstid finns vår a'la carté-meny som alltid.
+                        </p>
+                        <img src="img/vyer/buffetfood.jpg" alt="Ett bord fullt med mat">
+                        <div>
+                            <button><a href="#">Läs mer</a></button><button><a href="#">Meny</a></button><button><a href="#">Restaurang</a></button>
+                        </div>
                     </section>
-                    <section>
-                        <h3>Nyhet 4</h3>
+                    <section class="news-item">
+                        <h3>Nytt för säsongen &#128085;</h3>
+                        <time datetime="2024-05-05 17:03">Publicerat: 5 Maj 2024, klockan 17:03</time>
+                        <hr>
+                        <p>
+                            Uppgradera din golfgarderob! I vår shop hittar du nu det senaste inom golfmode från kända märken.
+                            Besök oss och hitta din nya favorittröja eller keps. Vi har något för alla!
+                        </p>
+                        <img src="img/vyer/t-shirts.jpg" alt="En rad t-shirts">
+                        <div>
+                            <button><a href="#">Läs mer</a></button><button><a href="#">Webbshop</a></button><button><a href="#">Öppettider</a></button>
+                        </div>
                     </section>
-                    <section>
-                        <h3>Nyhet 5</h3>
-                        <iframe height="280" src="https://www.youtube.com/embed/it1rTvBcfRg?list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s" title="HTML - Introduction - W3Schools.com" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <section class="news-item">
+                        <h3>Nyrenoverad bana &#x1F389;</h3>
+                        <time datetime="2024-04-25 14:05">Publicerat: 25 April 2024, klockan 14:05</time>
+                        <hr>
+                        <p>
+                            Nu är banan öppen! Vi har flertalet nya sittområden där
+                            man kan vila och umgås under sin runda. Vi har även rustat upp våra bunkrar, och uppgraderat
+                            gräset på ett antal ställen. Välkommen!
+                        </p>
+                        <img src="img/vyer/bana.jpg" alt="En rad t-shirts">
+                        <div>
+                            <button><a href="#">Läs mer</a></button><button><a href="#">Bokning</a></button><button><a href="#">Evenemang</a></button>
+                        </div>
                     </section>
-                    <section>
+                    <section class="news-item">
                         <h3>Nyhet 6</h3>
+                        <time datetime="2024-05-14 07:23">Publicerat: 14 Maj 2024, klockan 07:23.</time>
+                        <hr>
                         <iframe height="280" src="https://www.youtube.com/embed/it1rTvBcfRg?list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s" title="HTML - Introduction - W3Schools.com" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </section>
-                    <section>
+                    <section class="news-item">
                         <h3>Nyhet 7</h3>
+                        <time datetime="2024-05-14 07:23">Publicerat: 14 Maj 2024, klockan 07:23.</time>
+                        <hr>
                         <iframe height="280" src="https://www.youtube.com/embed/it1rTvBcfRg?list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s" title="HTML - Introduction - W3Schools.com" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </section>
                 </div>
@@ -156,10 +206,10 @@
             <div class="social-media">
                 <h4>Sociala medier</h4>
                 <p>
-                <a href="#"><img src="img/ikoner/facebook.png" height="44" alt=""></a>
-                <a href="#"><img src="img/ikoner/instagram.png" height="44" alt=""></a>
-                <a href="#"><img src="img/ikoner/twitter.png" height="44" alt=""></a>
-                <a href="#"><img src="img/ikoner/linkedin.png" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/facebook.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/instagram.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/twitter.svg" height="44" alt=""></a>
+                    <a href="#"><img src="img/ikoner/linkedin.svg" height="44" alt=""></a>
                 </p>
             </div>
         </div>
@@ -168,6 +218,3 @@
 
 </body>
 </html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
