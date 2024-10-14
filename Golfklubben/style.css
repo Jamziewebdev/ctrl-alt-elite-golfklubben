@@ -698,9 +698,10 @@ footer {
 }
 
 .content {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin: 1.5rem;
+    justify-content: space-between;
+    margin: 50px 0;
 }
 
 footer p, address {
