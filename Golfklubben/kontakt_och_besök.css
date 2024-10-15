@@ -276,10 +276,18 @@ footer {
     text-shadow: 1px 1px 3px black;
 }
 
+h4 {
+    font-size: 1.2rem;
+    width: 200px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
 .content {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin: 1.5rem;
+    justify-content: space-between;
+    margin: 50px 0;
 }
 
 footer p, address {
@@ -298,17 +306,24 @@ footer a {
 
 .social-media h4 {
     margin-bottom: 8px;
+    width: 200px;
+
 }
 .social-media {
-    width: 120px;
-    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+    height: 44px;
 
 }
 
-
-    /* Skugga när man hovrar */
+/* Skugga när man hovrar */
 .social-media img:hover {
-    filter: drop-shadow(0 0 10px #ffffff);
+    height: 55px;
+    transition: 0.5s;
+    
 }
 
 .newsform input[type=email] {
