@@ -59,7 +59,7 @@
             <article>
                 <section>
                     <!--Bild på vårt klubbhus för att lättare kunna hitta till oss.-->
-                    <img src="img/vyer/golfklubb.jpg" alt="Vårt klubbhus">
+                    <img class="klubbhus" src="img/vyer/golfklubb.jpg" alt="Vårt klubbhus">
                 </section>
                 <section>
                     <h2>Besöksinformation:</h2>
@@ -107,18 +107,21 @@
             </article>
             <article>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>James Ziegler</h3>
                     <h4>Ordförande</h4>
                     <p>Telefon: 070 - 123 45 67</p>
                     <p>Email: james.ziegler@elitegolf.se</p>
                 </section>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>Rebecca Gren Hörnfeldt</h3>
                     <h4>Kansli</h4>
                     <p>Telefon: 070 - 123 45 67</p>
                     <p>Email: rebecca.gren.hornfeldt@elitegolf.se</p>
                 </section>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>San Zangana</h3>
                     <h4>Ekonomi</h4>
                     <p>Telefon: 070 - 123 45 67</p>
@@ -127,18 +130,21 @@
             </article>
             <article>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>Alex Elias</h3>
                     <h4>Klubbchef</h4>
                     <p>Telefon: 070 - 123 45 67</p>
                     <p>Email: alex.elias@elitegolf.se</p>
                 </section>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>William Rask</h3>
                     <h4>Banchef</h4>
                     <p>Telefon: 070 - 123 45 67</p>
                     <p>Email: william.rask@elitegolf.se</p>
                 </section>
                 <section>
+                    <img src="img/person-1824147_1280.png" alt="Profilbild">
                     <h3>Mustafe Ali Awale</h3>
                     <h4>Restaurang</h4>
                     <p>Telefon: 070 - 123 45 67</p>
@@ -149,64 +155,53 @@
             <!--Formulär för kontakt.-->
                 <form>
                     <h2>Kontakta oss!</h2>
-                    <br>
+                    <fieldset>
+                        <legend>Personuppgifter:</legend>
                     <label for="name">Namn:</label>
-                    <br>
                     <input type="text" id="textrutor" name="name">
-                    <br>
                     <label for="email">Email:</label>
-                    <br>
                     <input type="text" id="textrutor" name="email">
-                    <br>
                     <label for="phonenumber">Telefon:</label>
-                    <br>
                     <input type="text" id="textrutor" name="phonenumber" maxlength="10">
-                    <br>
+                </fieldset>
+                <fieldset>
                     <label for="message">Meddelande:</label>
-                    <br>
-                    <input type="text" id="meddelande" name="message">
-                    <br>
+                    <textarea id="meddelande" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
                     <input type="checkbox" id="consent" name="consent" value="consent" required>
                     <label for="consent">*Jag samtycker till behandling av personuppgifter enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/personuppgiftslag-1998204_sfs-1998-204/">personuppgiftslagen.</a></label>
                     <br>
+                    <br>
                     <input type="submit" id="submit-button" value="Skicka">
+                </fieldset>
                 </form>
                 <!--Formulär för sponsring.-->
                 <form>
                     <h2>Vill du sponsra oss?</h2>
                     <p>Om ert företag är intresserade av att sponsra oss får ni gärna fylla i den här intresseanmälan.</p>
-                    <br>
+                    <fieldset>
+                    <legend>Företagsuppgifter:</legend>
                     <label for="company">Företag:*</label>
-                    <br>
                     <input type="text" id="textrutor" name="company" required>
-                    <br>
                     <label for="organization-number">Organisationsnummer:*</label>
-                    <br>
                     <input type="text" id="textrutor" name="organization-number" required>
-                    <br>
                     <label for="name-contact">Namn kontaktperson:*</label>
-                    <br>
                     <input type="text" id="textrutor" name="name-contact" required>
-                    <br>
                     <label for="phonenumber">Telefonnummer:*</label>
-                    <br>
                     <input type="text" id="textrutor" name="phonenumber" maxlength="10" required>
-                    <br>
                     <label for="email">Email:</label>
-                    <br>
                     <input type="text" id="textrutor" name="email">
-                    <br>
+                    </fieldset>
+                    <fieldset>
                     <label for="message">Meddelande:</label>
-                    <br>
-                    <input type="text" id="meddelande" name="message">
-                    <br>
+                    <textarea id="meddelande" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
                     <input type="checkbox" id="consent" name="consent" value="consent" required>
                     <label for="consent">*Jag samtycker till behandling av personuppgifter enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/personuppgiftslag-1998204_sfs-1998-204/">personuppgiftslagen.</a></label>
                     <br>
+                    <br>
                     <input type="submit" id="submit-button" value="Skicka">
+                    </fieldset>
                 </form>
             </article>
-            <br>
             <!--Knapp med länk till bokningen.-->
             <div class="bokning">
                 <a href="boka.html">

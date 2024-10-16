@@ -406,7 +406,6 @@ article {
     display: flex;
     flex-direction: column;
     background-color: #b6e0cea6;
-    /* Tar upp 100% av ledigt utrymme */
     width: 100%;
     padding: 5px 10px;
 }
@@ -420,27 +419,41 @@ article {
 }
 
 #contact form {
-    width: 500px;
-    border: solid 2px;
-    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 20px;
-    border-color: #38A3A5;
-    background-color: #d8f0e5;
+    background: white;
+    border-radius: 10px;
     filter: drop-shadow(0 0 15px black);
 }
 
-#contact #textrutor {
-    padding: 5px;
-    width: 300px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+#contact fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
-#contact #meddelande {
-    width: 300px;
-    padding: 5px;
-    padding-bottom: 100px;
-    border-radius: 10px;
+#contact legend {
+    font-weight: bold;
+    color: #444;
+}
+
+#contact label {
+    font-weight: 600;
+}
+
+#contact input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#contact #consent {
+    width: auto;
+    margin-right: 10px;
 }
 
 #contact .bokning {
@@ -456,6 +469,16 @@ article {
 #about section img, 
 #about section iframe {
     width: 50%;
+}
+
+#contact .klubbhus {
+    margin: auto;
+    width: 100%;
+}
+
+#contact section img {
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 /* --- Artikel-, sektions-, list-, tabell-, och formulärstilar för evenemangs- och resultatisdorna --- */
