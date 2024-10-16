@@ -151,13 +151,20 @@ h4 {
 
 /* --------------- Text- och rubrikstilar --------------- */
 
-/* --- Artikelrubrik startsida --- */
+/* --- Rubriker startsida --- */
 
 #start article h2 {
     color: #34775a;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
+
+#start article section h4 {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+}
+
 
 /* --- Huvudrubrik medlemssida --- */
 
@@ -294,15 +301,19 @@ h4 {
 /* --- Knappstilar för start-, kontakt-, och evenemangssidor --- */
 
 button, 
-#start .news-item button, 
+.hero-content-start .button,
+.news-item .button, 
+.memberships .button,  
 #contact #submit-button, 
 #event button {
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     font-size: 0.8rem;
     border: none;
     border-radius: 5px;
     display: inline-block;
     width: 150px;
+    max-width: 33%;
     padding: 10px 15px;
     color: #fff;
     background-color: #34775a;
@@ -310,22 +321,22 @@ button,
     cursor: pointer;
     text-shadow: 1px 1px 3px black;
     transition:.3s;
+    text-decoration: none;
+}
+
+.hero-content-start .button {
+    margin: 5px;
 }
 
 /* --- Hovringsstilar för knappar på start-, kontakt, och evenemangssidor */
 
 button:hover, 
-#start .news-item button:hover, 
+.news-item .button:hover, 
+.memberships .button:hover,
+.hero-content-start .button:hover,
 #contact #submit-button:hover, 
 #event button:hover {
     background-color: #34614d;
-}
-
-/* --- Stilar för länkar i knappar --- */
-
-#start button a {
-    text-decoration: none;
-    color: #fff;
 }
 
 /* --- Stilar för bokningsknapp på kontaktsidan --- */
@@ -547,15 +558,24 @@ article {
 
 /* --- Artikel-, sektions-, och containerstilar för startsidan --- */
 
+#start article {
+    display: flex;
+    flex-direction: column;
+}
+
+
 #start .news-item {
+    display: flex;
+    flex-direction: column;
     background-color: #b6e0cea6;
-    min-width: 400px;
     width: 400px;
+    max-width: 33%;
     border-radius: 5px;
     margin-bottom: 5px;
-    padding: 10px;
+    padding: 0.8em;
     border: 0.5rem double white;
     text-align: left;
+    height: fill;
 }
 
 #start time {
@@ -566,13 +586,38 @@ article {
     color: #34614d;
 }
 
-#start .news-item div {
-    padding-top: 5px;
+#start .news-item div, #start .memberships div {
     display: flex;
+    padding-top: 5px;
+    height: 100%;
+}
+
+#start div a {
+    min-width: 110px;
+    margin-top: auto;
+}
+
+#start .memberships {
+    border: 1px solid black;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    bottom: 0;
+    justify-content: space-around;
+}
+
+#start .memberships section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    max-width: 33%;
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+#start .memberships section .price {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 20px;
 }
 
 /* --- Linjestilar startsida --- */
@@ -588,11 +633,12 @@ article {
 /* --- Bildstilar sektion startsida --- */
 
 #start .news-item img {
-    display: block;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    min-width: 100px;
+    width: 75%;
+    max-width: 250px;
     border: 2px solid white;
     border-radius: 5px;
 }
