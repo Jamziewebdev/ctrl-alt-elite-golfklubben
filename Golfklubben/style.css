@@ -598,10 +598,13 @@ article {
 }
 
 #start .memberships {
-    border: 1px solid black;
     flex-direction: row;
     justify-content: space-around;
+    background-color: #b6e0cea6;
+    border-radius: 4px;
+    padding: 10px 0;
 }
+
 
 #start .memberships section {
     display: flex;
@@ -609,16 +612,48 @@ article {
     align-items: center;
     width: 300px;
     max-width: 33%;
-    border: 1px solid black;
-    padding: 10px;
-
+    border-radius: 4px;
+    padding: 25px 10px;
+    background-color: #fff;
+    border: 0.5rem double #b6e0cea6;
 }
 
 #start .memberships section .price {
     font-size: 2em;
     font-weight: 700;
-    margin-top: 20px;
+    margin: 0 0 20px;
+
 }
+
+#start .memberships .info {
+    height: 200px;
+    margin: 10px 0 10px;
+}
+
+#start .memberships h4 {
+    font-size: 2.5em;
+    border: none;
+}
+
+
+#start .memberships .gold h4 {
+    color: #b29900;
+
+}
+
+
+#start .memberships .silver h4 {
+    color:  #C0C0C0;
+
+}
+
+#start .memberships .bronze h4 {
+    color: #Cd7f32;
+
+}
+
+
+
 
 /* --- Linjestilar startsida --- */
 
