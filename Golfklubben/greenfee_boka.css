@@ -121,6 +121,7 @@ ul {
     background-image: url("img-booking/icons8-arrow-50\ \(2\).png");
     background-size: cover;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .row {
@@ -147,6 +148,7 @@ ul {
 .row-button:hover, .row-button:focus {
     background-color: #34775a;
     color: white;
+    cursor: pointer;
 }
 
 .boka-nu-button {
