@@ -300,8 +300,8 @@ h4 {
 
 /* --- Knappstilar för start-, kontakt-, och evenemangssidor --- */
 
-button, 
-.hero-content-start .button,
+
+#member button,.hero-content-start .button,
 .news-item .button, 
 .memberships .button,  
 #contact #submit-button, 
