@@ -339,28 +339,25 @@ button:hover,
     background-color: #34614d;
 }
 
-/* --- Stilar för bokningsknapp på kontaktsidan --- */
 
-#contact .button-bokning {
-    padding: 10px;
-    margin-top: 10px;
-    width: 200px;
-    height: 70px;
+/* --- Stilar för bokningslänk på kontaktsidan --- */
+
+#contact .bokning a{
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    padding: 20px;
     font-weight: bold;
     font-size: 28px;
 }
 
-/* --- Hovringsstilar för bokningsknapp på kontaktsidan --- */
+/* --- Hovringsstilar för bokningslänk på kontaktsidan --- */
 
-#contact .button-bokning:hover {
+#contact .bokning a:hover {
     cursor: pointer;
-    border: 3px solid rgb(255, 255, 255);
-    color: white;
-    transition: 0.5s;
-    height: 100px;
-    width: 240px;;
+    color: #34614d;
     text-transform: uppercase;
-    border-radius: 50px;
+    text-decoration: underline;
 }
 
 /* --- Knbappstilar för evenemangssidan --- */
