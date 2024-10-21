@@ -42,9 +42,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding:25px 0;
-    /* Anger att layoutmönstret inuti containern header ska vara 
-    flexbox. */
+    min-height: 5em;
+    height: 100%;
+    max-height: 5em;
     display: flex;
     /* Flex direction row innebär att alla objekt i containern header
     radar upp sig i horisontellt */
@@ -58,8 +58,14 @@ header {
     
 }
 
+#menu-toggle, #burger, #mobile-menu {
+    display: none;
+}
+
 header img {
-    height: 20px;
+    height: 50%;
+    max-height: 20px;
+    min-height: 10px;
 
 }
 
@@ -77,18 +83,20 @@ nav a {
     color:inherit;
     font-size: 0.9rem;
     text-decoration: none;
-    padding: 18px 15px;
+    padding: 1.2em 1em;
     position:relative;
 }
 
-nav a:hover {
+nav a:hover, #mobile-menu a {
     color: #13486b;
     
 }
-nav a:hover::before {
+nav a:hover::before,
+#mobile-menu a:hover::before {
     width:100%;
 }
-nav a::before{
+nav a::before,
+#mobile-menu a::before {
     transition:.3s;
     content:"";
     width:0;
@@ -792,7 +800,7 @@ article {
 
 footer {
     flex: 4;
-    background-color: #22577A;
+    background-color: #244034;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -804,6 +812,8 @@ footer {
 
 .content {
     display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 1.5rem;
     width: 100%;
@@ -811,6 +821,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+.shortcuts, .newsform, .details, .social-media {
+    max-width: 200px;
+    width: 100%;
+}
+
 
 footer p, address {
     margin: 0, 0.3rem;
@@ -826,17 +842,19 @@ footer a {
     border-bottom: 1px solid #e6ffe8;
 }
 
-.social-media h4 {
+footer h4 {
     margin-bottom: 8px;
-    width: 200px;
-
 }
+
+
+
 .social-media {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
     width: 200px;
+    max-width: 200px;
+
     height: 44px;
 
 }
@@ -863,8 +881,8 @@ footer a {
     border-radius: 5px;
     font-size: 0.9rem;
     color: #fff;
-    margin: 5px 0;
-    padding: 10px 25px;
+    margin: 0.3em 0;
+    padding: 0.6em 2em;
     text-align: center;
     cursor: pointer;
     text-shadow: 1px 1px 3px black;
@@ -873,4 +891,156 @@ footer a {
 
 .newsform input[type=submit]:hover {
     background-color: #34614d;
+}
+
+
+@media only screen and (max-width: 980px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    footer {
+        padding-bottom: 1em;
+    }
+
+    .container, .content {
+        max-width: 980px;
+        width: 100%;
+
+    }
+
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    nav a {
+        padding: 0.5em;
+        font-size: 0.8rem;
+        line-height: 1.4em;
+    }
+
+    .shortcuts, .newsform, .details, .social-media {
+        width: 50%;
+        margin-bottom: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    .container, .content {
+        max-width: 768px;
+        padding: 0 0.5em;
+    }
+
+    #burger {
+        position: absolute;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        right: 1rem;
+        top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #burger > div {
+        height: 2px;
+        background-color: #000;
+        transition: 0.5s;
+        z-index: 999;
+    }
+    
+    #menu-toggle:checked ~ #burger > div:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+
+    #menu-toggle:checked ~ #burger > div:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ #burger > div:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+    
+    #menu-toggle:checked ~ #mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: #ecfff7;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        transition-timing-function: cubic-bezier(10,2,3,1);
+        top: 0;
+        z-index: 0;
+        transition: 0.5s;
+    }
+
+    #mobile-menu a {
+        font-weight: 400;
+        position: relative;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+        padding: 1.2em 1em;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .container {
+        max-width: 480px;
+        width: 90%;
+    }
+
+    .shortcuts {
+        max-width: 480px;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    .shortcuts a {
+        font-size: 1.4em;
+        min-width: 30%;
+        text-align: left;
+        line-height: 1.8em;
+    }
+
+    .newsform input[type=submit], .newsform input[type=email]{
+        float: left;
+    }
+    
+        .newsform, .details, .social-media {
+        max-width: 480px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer h4 {
+        text-align: center;
+        width: 100%;
+        margin: 0.5em auto;
+
+    }
+
+
+    
+
 }
