@@ -949,21 +949,21 @@ footer h4 {
         flex-direction: column;
     }
 
-    #burger > div {
+    #burger > span {
         height: 3px;
         background-color: #000;
         transition: 0.5s;
         z-index: 999;
     }
     
-    #menu-toggle:checked ~ #burger > div:nth-child(1) {
+    #menu-toggle:checked ~ #burger > span:nth-child(1) {
         transform: translateY(15px) rotate(45deg);
     }
 
-    #menu-toggle:checked ~ #burger > div:nth-child(2) {
+    #menu-toggle:checked ~ #burger > span:nth-child(2) {
         opacity: 0;
     }
-    #menu-toggle:checked ~ #burger > div:nth-child(3) {
+    #menu-toggle:checked ~ #burger > span:nth-child(3) {
         transform: translateY(-15px) rotate(-45deg);
     }
     
