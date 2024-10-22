@@ -58,7 +58,7 @@ header {
     
 }
 
-#menu-toggle, #burger, #mobile-menu {
+#menu-toggle, #burger {
     display: none;
 }
 
@@ -78,7 +78,6 @@ header img {
     justify-content: space-between;
 }
 
-
 nav a {
     color:inherit;
     font-size: 0.9rem;
@@ -87,16 +86,19 @@ nav a {
     position:relative;
 }
 
-nav a:hover, #mobile-menu a {
+.mobile-homebtn {
+    display: none;
+}
+
+nav a:hover {
     color: #13486b;
     
 }
-nav a:hover::before,
-#mobile-menu a:hover::before {
+nav a:hover::before {
     width:100%;
 }
-nav a::before,
-#mobile-menu a::before {
+
+nav a::before {
     transition:.3s;
     content:"";
     width:0;
@@ -827,7 +829,6 @@ footer {
     width: 100%;
 }
 
-
 footer p, address {
     margin: 0, 0.3rem;
     
@@ -846,15 +847,12 @@ footer h4 {
     margin-bottom: 8px;
 }
 
-
-
 .social-media {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 200px;
     max-width: 200px;
-
     height: 44px;
 
 }
@@ -930,13 +928,13 @@ footer h4 {
 
 @media only screen and (max-width: 768px) {
 
-    nav {
-        display: none;
-    }
-
     .container, .content {
         max-width: 768px;
         padding: 0 0.5em;
+    }
+    
+    .container nav {
+        display: none;
     }
 
     #burger {
@@ -952,7 +950,7 @@ footer h4 {
     }
 
     #burger > div {
-        height: 2px;
+        height: 3px;
         background-color: #000;
         transition: 0.5s;
         z-index: 999;
@@ -969,10 +967,11 @@ footer h4 {
         transform: translateY(-15px) rotate(-45deg);
     }
     
-    #menu-toggle:checked ~ #mobile-menu {
+    #menu-toggle:checked ~ .container nav {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding-top: 5em;
         align-items: center;
         background: #ecfff7;
         width: 100%;
@@ -985,7 +984,17 @@ footer h4 {
         transition: 0.5s;
     }
 
-    #mobile-menu a {
+    .mobile-homebtn {
+        display: block;
+    }
+
+    .mobile-homebtn i {
+        color: #000;
+        font-size: 2.5em;
+        
+    }
+
+    .container nav a {
         font-weight: 400;
         position: relative;
         text-decoration: none;
@@ -994,9 +1003,6 @@ footer h4 {
         margin-bottom: 1em;
         padding: 1.2em 1em;
     }
-
-
-
 
 }
 
@@ -1025,7 +1031,7 @@ footer h4 {
         float: left;
     }
     
-        .newsform, .details, .social-media {
+    .newsform, .details, .social-media {
         max-width: 480px;
         width: 100%;
         text-align: center;
