@@ -13,8 +13,15 @@
 </head>
 <body>
     <header>
+        <input type="checkbox" id="menu-toggle">
+        <label id="burger" for="menu-toggle">
+            <!-- Changed div to span because of validation issue -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <div class="container">
-            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp Elite golf"></a>
+            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp och hemknapp Elite golf"></a>
             <nav>
                 <a href="restaurang.html">Restaurang & Shop</a>
                 <a href="medlem.html">Medlem</a>
@@ -23,6 +30,7 @@
                 <a href="greenfee.html">Greenfee</a>
                 <a href="evenemang.html">Evenemang & Tävlingar</a>
                 <a href="kontakt.html">Kontakt</a>
+                <a class="mobile-homebtn" href="index.html"><i class="fa fa-home"></i></a>
             </nav>
         </div>
     </header>
@@ -103,7 +111,7 @@
             </article>
             <article>
                 <section>
-                    <h1>Vi som jobbar på Elite Golf:</h1>
+                    <h2>Vi som jobbar på Elite Golf:</h2>
                 </section>
             </article>
             <article>
@@ -159,20 +167,20 @@
                     <fieldset>
                         <legend>Personuppgifter:</legend>
                     <label for="name">Namn:</label>
-                    <input type="text" id="textrutor" name="name">
-                    <label for="email">Email:</label>
-                    <input type="text" id="textrutor" name="email">
+                    <input type="text" id="name" name="name">
+                    <label for="email-contact">Email:</label>
+                    <input type="text" id="email-contact" name="email" pattern="@">
                     <label for="phonenumber">Telefon:</label>
-                    <input type="text" id="textrutor" name="phonenumber" maxlength="10">
+                    <input type="tel" id="phonenumber" name="phonenumber" maxlength="10">
                 </fieldset>
                 <fieldset>
                     <label for="message">Meddelande:</label>
-                    <textarea id="meddelande" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
-                    <input type="checkbox" id="consent" name="consent" value="consent" required>
-                    <label for="consent">*Jag samtycker till behandling av personuppgifter enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/personuppgiftslag-1998204_sfs-1998-204/">personuppgiftslagen.</a></label>
+                    <textarea id="message" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
+                    <input type="checkbox" id="consent-contact" name="consent" value="consent" required>
+                    <label for="consent-contact">*Jag samtycker till behandling av personuppgifter enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/personuppgiftslag-1998204_sfs-1998-204/">personuppgiftslagen.</a></label>
                     <br>
                     <br>
-                    <input type="submit" id="submit-button" value="Skicka">
+                    <input type="submit" id="submit-button-contact" value="Skicka">
                 </fieldset>
                 </form>
                 <!--Formulär för sponsring.-->
@@ -182,19 +190,19 @@
                     <fieldset>
                     <legend>Företagsuppgifter:</legend>
                     <label for="company">Företag:*</label>
-                    <input type="text" id="textrutor" name="company" required>
+                    <input type="text" id="company" name="company" required>
                     <label for="organization-number">Organisationsnummer:*</label>
-                    <input type="text" id="textrutor" name="organization-number" required>
+                    <input type="number" id="organization-number" name="organization-number" required>
                     <label for="name-contact">Namn kontaktperson:*</label>
-                    <input type="text" id="textrutor" name="name-contact" required>
-                    <label for="phonenumber">Telefonnummer:*</label>
-                    <input type="text" id="textrutor" name="phonenumber" maxlength="10" required>
-                    <label for="email">Email:</label>
-                    <input type="text" id="textrutor" name="email">
+                    <input type="text" id="name-contact" name="name-contact" required>
+                    <label for="phonenumber-sponsor">Telefonnummer:*</label>
+                    <input type="tel" id="phonenumber-sponsor" name="phonenumber" maxlength="10" required>
+                    <label for="email-sponsor">Email:</label>
+                    <input type="email" id="email-sponsor" name="email" pattern="@">
                     </fieldset>
                     <fieldset>
-                    <label for="message">Meddelande:</label>
-                    <textarea id="meddelande" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
+                    <label for="message-sponsor">Meddelande:</label>
+                    <textarea id="message-sponsor" name="message" rows="6" placeholder="Skriv ditt meddelande här..."></textarea>
                     <input type="checkbox" id="consent" name="consent" value="consent" required>
                     <label for="consent">*Jag samtycker till behandling av personuppgifter enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/personuppgiftslag-1998204_sfs-1998-204/">personuppgiftslagen.</a></label>
                     <br>
@@ -244,7 +252,7 @@
                 <h4>Kontakta oss:</h4>
                 <p>
                     Telefon: 070 123 45 67<br>
-                    Mail: låtsas@låtsas.se
+                    Mail: info@elitegolf.se
                 </p>
                 <h4>Öppettider:</h4>
                 <p> Mån-Fre: 07.00-18.00 <br>

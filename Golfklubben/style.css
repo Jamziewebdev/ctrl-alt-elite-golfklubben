@@ -358,6 +358,7 @@ h4 {
 .news-item .button, 
 .memberships .button,  
 #contact #submit-button, 
+#contact #submit-button-contact,
 #event button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -392,7 +393,8 @@ button:hover,
 .news-item .button:hover, 
 .memberships .button:hover,
 .hero-content-start .button:hover,
-#contact #submit-button:hover, 
+#contact #submit-button:hover,
+#contact #submit-button-contact:hover, 
 #event button:hover {
     background-color: #34614d;
 }
@@ -418,7 +420,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* --- Knbappstilar för evenemangssidan --- */
+/* --- Knappstilar för evenemangssidan --- */
 
 #event button {
     width: 100%;
@@ -517,7 +519,8 @@ article {
     font-size: 16px;
 }
 
-#contact #consent {
+#contact #consent, 
+#contact #consent-contact {
     width: auto;
     margin-right: 10px;
 }
@@ -987,7 +990,7 @@ footer h4 {
         font-size: 0.9em;
     }
 
-    #start 
+
 
 
     /* ----------------- Egna stilar för bokningssida ----------------- */
@@ -1036,21 +1039,21 @@ footer h4 {
         flex-direction: column;
     }
 
-    #burger > div {
+    #burger > span {
         height: 3px;
         background-color: #000;
         transition: 0.5s;
         z-index: 999;
     }
     
-    #menu-toggle:checked ~ #burger > div:nth-child(1) {
+    #menu-toggle:checked ~ #burger > span:nth-child(1) {
         transform: translateY(15px) rotate(45deg);
     }
 
-    #menu-toggle:checked ~ #burger > div:nth-child(2) {
+    #menu-toggle:checked ~ #burger > span:nth-child(2) {
         opacity: 0;
     }
-    #menu-toggle:checked ~ #burger > div:nth-child(3) {
+    #menu-toggle:checked ~ #burger > span:nth-child(3) {
         transform: translateY(-15px) rotate(-45deg);
     }
     
@@ -1116,7 +1119,28 @@ footer h4 {
 
 
 
+    /*Responsivitet kontaktsidan*/
+
+    #contact article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contact article section {
+        margin: 3px;
+        text-align: center;
+        
+    }
+
+    #contact article section h4 {
+        margin: auto;
+    }
+
+    #contact form {
+        margin-bottom: 25px;
+    }
 }
+
 
 @media only screen and (max-width: 480px) {
 
