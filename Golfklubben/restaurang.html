@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="restaurang.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
     <title>Elite Golf - Resaurang & Shop</title>
     <link rel="icon" type="image/x-icon" href="/img/logotyp/golfboll.svg">
-    <link rel="stylesheet" href="restaurang.css">
 </head>
 <body>
     <header>
+        <input type="checkbox" id="menu-toggle">
+        <label id="burger" for="menu-toggle">
+            <!-- Changed div to span because of validation issue -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <div class="container">
-            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp Elite golf"></a>
+            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp och hemknapp Elite golf"></a>
             <nav>
                 <a href="restaurang.html">Restaurang & Shop</a>
                 <a href="medlem.html">Medlem</a>
                 <a href="om.html">Om oss</a>
                 <a href="boka.html">Boka</a>
+                <a href="greenfee.html">Greenfee</a>
                 <a href="evenemang.html">Evenemang & Tävlingar</a>
                 <a href="kontakt.html">Kontakt</a>
+                <a class="mobile-homebtn" href="index.html"><i class="fa fa-home"></i></a>
             </nav>
         </div>
     </header>
@@ -190,7 +199,7 @@
                 <h4>Kontakta oss:</h4>
                 <p>
                     Telefon: 070 123 45 67<br>
-                    Mail: låtsas@låtsas.se
+                    Mail: info@elitegolf.se
                 </p>
                 <h4>Öppettider:</h4>
                 <p> Mån-Fre: 07.00-18.00 <br>
