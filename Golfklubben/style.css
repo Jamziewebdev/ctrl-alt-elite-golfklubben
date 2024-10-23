@@ -315,6 +315,7 @@ h4 {
 .news-item .button, 
 .memberships .button,  
 #contact #submit-button, 
+#contact #submit-button-contact,
 #event button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -344,7 +345,8 @@ button:hover,
 .news-item .button:hover, 
 .memberships .button:hover,
 .hero-content-start .button:hover,
-#contact #submit-button:hover, 
+#contact #submit-button:hover,
+#contact #submit-button-contact:hover, 
 #event button:hover {
     background-color: #34614d;
 }
@@ -370,7 +372,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* --- Knbappstilar för evenemangssidan --- */
+/* --- Knappstilar för evenemangssidan --- */
 
 #event button {
     width: 100%;
@@ -469,7 +471,8 @@ article {
     font-size: 16px;
 }
 
-#contact #consent {
+#contact #consent, 
+#contact #consent-contact {
     width: auto;
     margin-right: 10px;
 }
@@ -1004,7 +1007,28 @@ footer h4 {
         padding: 1.2em 1em;
     }
 
+    /*Responsivitet kontaktsidan*/
+
+    #contact article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contact article section {
+        margin: 3px;
+        text-align: center;
+        
+    }
+
+    #contact article section h4 {
+        margin: auto;
+    }
+
+    #contact form {
+        margin-bottom: 25px;
+    }
 }
+
 
 @media only screen and (max-width: 480px) {
 
