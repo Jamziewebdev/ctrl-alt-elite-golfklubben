@@ -1,6 +1,7 @@
 #hero-slideshow {
     width: 100%;
-    height: 500px;
+    height: 60vh;
+    max-height: 600px;
     position: relative;
 }
 
@@ -65,13 +66,13 @@
 #restaurant .pagehead {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
 #restaurant .pagehead section {
     max-width: 300px;
-    width: 25%;
+    width: 24%;
 
 }
 
@@ -134,9 +135,14 @@
 
 }
 
+#hero-slideshow p {
+    margin: 1em 0;
+    max-width: 600px;
 
+}
 
 #restaurant h2 {
+    display: block;
     color: #34775a;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -153,6 +159,15 @@
     line-height: 1.4em;
 }
 
+#restaurant .pagehead a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #34775a;
+}
+
+#restaurant .pagehead a:hover {
+    text-decoration: underline;
+}
 
 #restaurant h3 {
     margin: 0.4em auto;
@@ -163,53 +178,92 @@
     font-size: 1em;
     text-align: center;
 }
-
-
-
 #restaurant p {
     font-size: 0.9em;
 }
 
 
+
+#restaurant form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2em;
+    background: white;
+    border-radius: 4px;
+}
+
+#restaurant fieldset {
+    border: 0.1em solid #b6e0cea6;
+    padding: 0.5em;
+    margin-bottom: 15px;
+}
+
+#restaurant legend {
+    font-weight: bold;
+    color: #444;
+}
+
+#restaurant label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#restaurant input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 0.1em solid #5f7069b2;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#restaurant 
+input:invalid, 
+select:invalid, 
+textarea:invalid {
+    border-color: #ffdede;
+    background-color: #fff8f8;
+}
+
+
+
+
 @media only screen and (max-width: 980px) {
     
 
-#restaurant .daily-menu,
-#restaurant .always-menu {
-    overflow-x: scroll;
-}
+    #restaurant .daily-menu,
+    #restaurant .always-menu {
+        overflow-x: scroll;
+    }
 
-#restaurant .daily-menu::-webkit-scrollbar,
-#restaurant .always-menu::-webkit-scrollbar {
-    height: 8px;
-}
+    #restaurant .daily-menu::-webkit-scrollbar,
+    #restaurant .always-menu::-webkit-scrollbar {
+        height: 8px;
+    }
 
-#restaurant .daily-menu::-webkit-scrollbar-thumb:hover,
-#restaurant .always-menu::-webkit-scrollbar-thumb:hover {
-    cursor: grab;
-}
-
-
-#restaurant .daily-menu::-webkit-scrollbar-thumb,
-#restaurant .always-menu::-webkit-scrollbar-thumb {
-    background: #34775a;
-    border-radius: 2px;
-
-}
-
-#restaurant .daily-menu::-webkit-scrollbar-track,
-#restaurant .always-menu::-webkit-scrollbar-track {
-    background: #f3f3f3;
-    box-shadow: inset 0 0 5px #aaaaaa;
-    border-radius: 2px;
-}
+    #restaurant .daily-menu::-webkit-scrollbar-thumb:hover,
+    #restaurant .always-menu::-webkit-scrollbar-thumb:hover {
+        cursor: grab;
+    }
 
 
+    #restaurant .daily-menu::-webkit-scrollbar-thumb,
+    #restaurant .always-menu::-webkit-scrollbar-thumb {
+        background: #34775a;
+        border-radius: 2px;
 
+    }
 
+    #restaurant .daily-menu::-webkit-scrollbar-track,
+    #restaurant .always-menu::-webkit-scrollbar-track {
+        background: #f3f3f3;
+        box-shadow: inset 0 0 5px #aaaaaa;
+        border-radius: 2px;
+    }
 
-}
-
-@media only screen and (max-width: 768px) {
 
 }
