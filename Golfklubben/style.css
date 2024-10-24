@@ -764,9 +764,6 @@ article {
     border-radius: 2px;
 }
 
-#start .newsfeed::-webkit-scrollbar-thumb:hover {
-    cursor: grab;
-}
 
 
 
