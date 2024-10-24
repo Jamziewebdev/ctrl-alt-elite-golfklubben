@@ -1,19 +1,10 @@
-.hero-content-start p {
-    font-size: 1rem;
-    margin-bottom: 40px;
-}
-
-.hero-image-start {
-    background-image: url("img-restaurang/restaurant.jpg");
+#hero-slideshow {
     width: 100%;
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 500px;
     position: relative;
 }
 
-.hero-overlay-start {
+.hero-overlay-rs {
     width:100%;
     height:100%;
     background-color:rgba(0,0,0,0.65);
@@ -22,7 +13,16 @@
     left:0;
 }
 
-.hero-content-start {
+#hero-slideshow .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+#hero-slideshow .hero-content-rs {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -31,114 +31,185 @@
     color: white;
 }
 
-#restaurant article h2 {
+#hero-slideshow .one {
+    background-image: url("img-restaurang-shop/restaurant-2.jpeg");
+    opacity: 1;
+    animation: heroAnim 20s infinite;
+}
+
+#hero-slideshow .two {
+    background-image: url("img-restaurang-shop/shop.jpg");
+    animation: heroAnim 20s infinite 10s;
+}
+
+@keyframes heroAnim {
+    0%{opacity:0;}
+    4%{opacity:0;}
+    46%{opacity:1;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+
+/* -------------------------------- */
+
+
+
+#restaurant article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+}
+
+#restaurant .pagehead {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#restaurant .pagehead section {
+    max-width: 300px;
+    width: 25%;
+
+}
+
+
+#restaurant .menu-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+#restaurant .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #b6e0cea6;
+}
+
+
+#restaurant .daily-menu, .always-menu {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0.4em;
+    
+}
+
+#restaurant .food {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+
+#restaurant .item {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    width: 15%;
+    max-width: 180px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    border: 0.1em solid #b6e0cea6;
+    text-align: left;
+    background-color: #fff;
+}
+
+
+
+#restaurant .item img {
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+
+
+#restaurant h2 {
     color: #34775a;
     margin-bottom: 5px;
     padding-bottom: 5px;
+    width: 100%;
 }
 
-#restaurant button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#restaurant .news-item button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    display: inline-block;
-    width: 150px;
-    padding: 10px 15px;
-    color: #fff;
-    background-color: #34775a;
-    text-align: center;
-    cursor: pointer;
-    text-shadow: 1px 1px 3px black;
-    transition:.3s;
-}
-
-#restaurant .news-item button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#restaurant button:hover {
-    background-color: #34614d;
-}
-
-#restaurant .news-item, .öppettider {
-    background-color: #b6e0cea6;
-    min-width: 400px;
-    width: 400px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: 0.5rem double white;
+#restaurant .pagehead h3 {
+    font-size: 1em;
     text-align: left;
+    margin: 0.2em auto;
 }
 
-#restaurant .öppettider {
-    margin: auto;
+#restaurant .pagehead p {
+    line-height: 1.4em;
 }
 
-#restaurant time {
-    font-style: italic;
-    font-size: 0.8rem;
-    display: block;
+
+#restaurant h3 {
+    margin: 0.4em auto;
+}
+
+#restaurant h4  {
+    color: #244034;
+    font-size: 1em;
     text-align: center;
-    color: #34614d;
 }
 
-#restaurant .news-item div {
-    padding-top: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    bottom: 0;
+
+
+#restaurant p {
+    font-size: 0.9em;
 }
 
-#restaurant .news-item hr {
-    border-top: 1px solid #34614d;
-    width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#restaurant .news-item img {
-    display: block;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    border: 2px solid white;
-    border-radius: 5px;
-}
+@media only screen and (max-width: 980px) {
+    
 
-#restaurant .newsfeed {
+#restaurant .daily-menu,
+#restaurant .always-menu {
     overflow-x: scroll;
 }
 
-#restaurant .memberships, #restaurant .newsfeed {
-    display: flex;
-    flex-direction: row;
+#restaurant .daily-menu::-webkit-scrollbar,
+#restaurant .always-menu::-webkit-scrollbar {
+    height: 8px;
 }
 
-#restaurant  .newsfeed::-webkit-scrollbar {
-    height: 12px;
+#restaurant .daily-menu::-webkit-scrollbar-thumb:hover,
+#restaurant .always-menu::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
 }
 
-#restaurant  .newsfeed::-webkit-scrollbar-thumb {
+
+#restaurant .daily-menu::-webkit-scrollbar-thumb,
+#restaurant .always-menu::-webkit-scrollbar-thumb {
     background: #34775a;
-    border-radius: 6px;
+    border-radius: 2px;
 
 }
 
-#restaurant  .newsfeed::-webkit-scrollbar-track {
+#restaurant .daily-menu::-webkit-scrollbar-track,
+#restaurant .always-menu::-webkit-scrollbar-track {
     background: #f3f3f3;
-    border-radius: 6px;
     box-shadow: inset 0 0 5px #aaaaaa;
-    padding: 1px;
+    border-radius: 2px;
+}
+
+
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
 }
