@@ -323,7 +323,59 @@ footer a {
     transition: 0.3s;
 }
 
-.newsform input[type=submit]:
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero-image h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image button {
+        padding: 1rem 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .part1 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .medal {
+        padding: 1rem;
+    }
+
+    .text h1 {
+        font-size: 1.75rem;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text h3 {
+        font-size: 1.25rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 50vh; /* Minska höjd */
+    }
+
+    .hero-image h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image button {
+        padding
+    }
 
 
 
