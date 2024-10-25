@@ -411,21 +411,23 @@ button:hover,
 /* --- Stilar för bokningslänk på kontaktsidan --- */
 
 #contact .bokning a{
-    text-align: center;
+    background-color: #34775a;
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
     text-decoration: none;
-    color: #111;
-    padding: 20px;
-    font-weight: bold;
-    font-size: 28px;
+    font-size: 1.3rem;
+    transition: ease-in-out .3s;
+    padding: 20px 80px;
+    margin-bottom: 50px;
+    align-self: center ;
+    text-wrap: nowrap;
 }
 
 /* --- Hovringsstilar för bokningslänk på kontaktsidan --- */
 
 #contact .bokning a:hover {
-    cursor: pointer;
-    color: #34614d;
-    text-transform: uppercase;
-    text-decoration: underline;
+    background-color: #34614d;  
 }
 
 /* --- Knbappstilar för evenemangssidan --- */
@@ -472,6 +474,10 @@ article {
 
 /* --- Artikel-, sektions-, och formulärstilar för kontaktsidan --- */
 
+#contact h1, #contact h2 {
+    color: #34775a;
+}
+
 #contact article {
     display: flex;
     flex-direction: row;
@@ -481,7 +487,6 @@ article {
 #contact article section {
     display: flex;
     flex-direction: column;
-    background-color: #b6e0cea6;
     width: 100%;
     padding: 5px 10px;
 }
@@ -535,7 +540,7 @@ article {
 }
 
 #contact .bokning {
-    margin-bottom: 20px;
+    margin: 30px 0 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
