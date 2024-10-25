@@ -1157,6 +1157,11 @@ footer h4 {
         max-width: 480px;
     }
 
+    nav {
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+    }
+
 
     main {
         max-width: 480px;
