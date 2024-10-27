@@ -44,7 +44,6 @@ header {
     z-index: 100;
     min-height: 5em;
     height: 100%;
-    max-height: 5em;
     display: flex;
     /* Flex direction row innebär att alla objekt i containern header
     radar upp sig i horisontellt */
@@ -56,6 +55,10 @@ header {
     align-items: center;
     background-color: white;
     
+}
+
+header .container {
+    padding: 0 20px;
 }
 
 #menu-toggle, #burger {
@@ -76,6 +79,13 @@ header img {
     display:flex;
     align-items:center;
     justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
@@ -963,25 +973,13 @@ footer h4 {
         padding-bottom: 1em;
     }
 
-    header .container {
-        padding-left: 0.6em;
-        padding-right: 0.6em;
-    }
-
     .container, .content {
         max-width: 980px;
         width: 100%;
 
     }
 
-    nav {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
     nav a {
-        padding: 0.5em;
-        font-size: 0.8rem;
         line-height: 1.4em;
     }
 
