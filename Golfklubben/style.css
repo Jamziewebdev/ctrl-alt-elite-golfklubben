@@ -435,6 +435,10 @@ article {
     background-color: #e6ffe8;
 }
 
+.omul {
+    list-style-position: inside;
+}
+
 
 #about article section {
     display: flex;
