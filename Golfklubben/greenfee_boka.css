@@ -20,7 +20,7 @@
 }
 
 .hero-content-boka h1{
-    font-size: 2rem;
+
     padding: 30px 0 30px 60px;
     margin-right: 20px;
 }
@@ -31,7 +31,7 @@ h1, h2, h3 {
 
 h1 {
     padding-left: 30px;
-    font-size: 35px;
+    font-size: 2rem;
     transform: skew(20deg);
     line-height: 30px;
 }
@@ -101,13 +101,10 @@ ul li{
 }
 
 .calendar-container-inner {
-    width: 900px;
     border: 1px solid black;
-    width: 100%;
 }
 
 .booking-calendar {
-    width: 100%;
     display: flex;
     overflow-x: scroll;
     column-gap: 0;
@@ -119,13 +116,11 @@ ul li{
     align-items: center;
     background-color: #34775a;
     flex-wrap: wrap;
-    height: fit-content;
     padding: 10px;
 }
 
 .calendar-header p {
     font-size: 1.3rem;
-
     letter-spacing: 2px;
     color: white;
 }
@@ -146,8 +141,9 @@ ul li{
 }
 
 .row button {
-    height: 70px;
-    width: 70px;
+    padding: 25px 15px;
+    width: 100%;
+    height: 100%;
     background-color: rgb(255, 255, 255);
     align-content: center;
     text-align: center;
@@ -155,7 +151,6 @@ ul li{
     border-radius: 0;
     text-shadow: none;
     color: black;
-    font-size: 0.89rem;
     outline: 1px solid #000;
     text-wrap: nowrap;
 }
@@ -189,5 +184,7 @@ ul li{
         padding: 0 10px;
     }
 
-
+    .calendar-container-inner {
+        width: 100%;
+    }
 }
