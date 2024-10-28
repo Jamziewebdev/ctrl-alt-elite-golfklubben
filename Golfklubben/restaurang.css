@@ -39,7 +39,7 @@
 }
 
 #hero-slideshow .two {
-    background-image: url("img-restaurang-shop/shop.jpg");
+    background-image: url("img-restaurang-shop/shop4.jpg");
     animation: heroAnim 20s infinite 10s;
 }
 
@@ -347,9 +347,6 @@ figure {
         width: 100%;
     }
 
-
-    figure img {
-    }
 
 
 }
