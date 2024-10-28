@@ -228,13 +228,6 @@ h4 {
     color: #333;
 }
 
-/* --- Huvudrubrik kontaktsida --- */
-
-#contact article h1 {
-    text-align: center;
-    padding: 10px;
-}
-
 /* --- Rubriker på evenemang och resultatsidor --- */
 
 #event h1, #event h2, #event h3, #event h4, 
@@ -361,14 +354,12 @@ h4 {
 
 /* --------------- Knappstilar --------------- */
 
-/* --- Knappstilar för start-, kontakt-, och evenemangssidor --- */
+/* --- Knappstilar för start- och evenemangssidor --- */
 
 
 #member button,.hero-content-start .button,
 .news-item .button, 
-.memberships .button,  
-#contact #submit-button, 
-#contact #submit-button-contact,
+.memberships .button,
 #event button,
 #restaurant #submit-button {
     font-family: 'Poppins', sans-serif;
@@ -399,48 +390,18 @@ h4 {
     width: 65%;
 }
 
-
-
-
-
-/* --- Hovringsstilar för knappar på start-, kontakt, och evenemangssidor */
+/* --- Hovringsstilar för knappar på start- och evenemangssidor */
 
 button:hover, 
 .news-item .button:hover, 
 .memberships .button:hover,
-.hero-content-start .button:hover,
-#contact #submit-button:hover,
-#contact #submit-button-contact:hover, 
+.hero-content-start .button:hover, 
 #event button:hover,
 #restaurant #submit-button:hover {
     background-color: #34614d;
 }
 
-
-
-/* --- Stilar för bokningslänk på kontaktsidan --- */
-
-#contact .bokning a{
-    background-color: #34775a;
-    width: fit-content;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.3rem;
-    transition: ease-in-out .3s;
-    padding: 20px 80px;
-    margin-bottom: 50px;
-    align-self: center ;
-    text-wrap: nowrap;
-}
-
-/* --- Hovringsstilar för bokningslänk på kontaktsidan --- */
-
-#contact .bokning a:hover {
-    background-color: #34614d;  
-}
-
-/* --- Knbappstilar för evenemangssidan --- */
+/* --- Knappstilar för evenemangssidan --- */
 
 #event button {
     width: 100%;
@@ -482,96 +443,11 @@ article {
     padding: 10px;
 }
 
-/* --- Artikel-, sektions-, och formulärstilar för kontaktsidan --- */
+/* --- Stilar för bilder och iframes i sektioner på om oss-sida --- */
 
-#contact h1, #contact h2 {
-    color: #34775a;
-}
-
-#contact article {
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-}
-
-#contact article section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 5px 10px;
-}
-
-#contact .form {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: transparent;
-}
-
-#contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 15px black);
-}
-
-#contact fieldset {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-#contact legend {
-    font-weight: bold;
-    color: #444;
-}
-
-#contact label {
-    font-weight: 600;
-}
-
-#contact input, textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-
-#contact #consent, 
-#contact #consent-contact {
-    width: auto;
-    margin-right: 10px;
-}
-
-#contact .bokning {
-    margin: 30px 0 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* --- Stilar för bilder och iframes i sektioner på kontakt och om oss-sidorna --- */
-
-#contact section img, 
 #about section img, 
 #about section iframe {
     width: 50%;
-}
-
-#contact .klubbhus {
-    margin: auto;
-    width: 100%;
-}
-
-#contact section img {
-    margin: auto;
-    margin-bottom: 20px;
 }
 
 /* --- Artikel-, sektions-, list-, tabell-, och formulärstilar för evenemangs- och resultatisdorna --- */
@@ -1121,25 +997,6 @@ footer h4 {
     /* ----------------- Egna stilar för greenfeesida ----------------- */
 
     /* ----------------- Egna stilar för kontaktsida ----------------- */
-
-    #contact article {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #contact article section {
-        margin: 3px;
-        text-align: center;
-        
-    }
-
-    #contact article section h4 {
-        margin: auto;
-    }
-
-    #contact form {
-        margin-bottom: 25px;
-    }
 
     /* ----------------- Egna stilar för medlemssida ----------------- */
 

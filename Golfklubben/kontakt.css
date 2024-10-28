@@ -1,0 +1,174 @@
+/* --- Huvudrubrik kontaktsida --- */
+
+#contact article h1 {
+    margin: auto;
+    padding: 10px;
+}
+
+/* --- Artikel-, sektions-, och formulärstilar för kontaktsidan --- */
+
+#contact h1, #contact h2 {
+    color: #34775a;
+    text-align: left;
+}
+
+#contact article {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
+    margin: 15px;
+}
+
+#contact article section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#contact .form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px black);
+}
+
+#contact fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#contact legend {
+    font-weight: bold;
+    color: #444;
+}
+
+#contact label {
+    font-weight: 600;
+}
+
+#contact input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#contact #consent, 
+#contact #consent-contact {
+    width: auto;
+    margin-right: 10px;
+}
+
+#contact .bokning {
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Stilar för bilder och iframes i sektioner på kontaktsida --- */
+
+#contact section img {
+    width: 50%;
+}
+
+#contact .klubbhus {
+    margin: auto;
+    width: 100%;
+}
+
+#contact section img {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* --- Knappstilar för kontaktsida --- */
+
+#contact #submit-button, 
+#contact #submit-button-contact {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    width: 150px;
+    max-width: 33%;
+    padding: 0.8em 1em;
+    color: #fff;
+    background-color: #34775a;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+}
+
+/* --- Hovringsstilar för knappar på kontaktsida --- */
+
+#contact #submit-button:hover,
+#contact #submit-button-contact:hover {
+    background-color: #34614d;
+}
+
+/* --- Stilar för bokningslänk på kontaktsidan --- */
+
+#contact .bokning a{
+    background-color: #34775a;
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: ease-in-out .3s;
+    padding: 20px 80px;
+    margin-bottom: 50px;
+    align-self: center ;
+    text-wrap: nowrap;
+}
+
+/* --- Hovringsstilar för bokningslänk på kontaktsidan --- */
+
+#contact .bokning a:hover {
+    background-color: #34614d;  
+}
+
+@media only screen and (max-width: 768px) { 
+
+    #contact article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contact article section {
+        margin: 3px;
+        text-align: center;
+        
+    }
+
+    #contact article section h4 {
+        margin: auto;
+    }
+
+    #contact form {
+        margin-bottom: 25px;
+    }
+
+}
+
+/* ---  --- */
