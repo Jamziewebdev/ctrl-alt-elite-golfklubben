@@ -7,80 +7,142 @@
 }
 
 body {
-    font-size: 1rem; /* Basstorlek */
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.5em;
     color: black;
-    background-color: #C7F9CC;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafffb;
     display: flex;
     flex-direction: column;
     height: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+    font-style: normal;
 }
 
 header {
-    color: #111;
+    color:#111;
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1.5rem 0;
+    min-height: 5em;
+    height: 100%;
     display: flex;
+    /* Flex direction row innebär att alla objekt i containern header
+    radar upp sig i horisontellt */
     flex-direction: row;
+    /* Täcker skärmen från sida till sida */
     width: 100%;
+    /* När man använder align items: center i flexbox så centreras
+    objekten vertikalt */
     align-items: center;
     background-color: white;
+    
+}
+
+header .container {
+    padding: 0 20px;
+}
+
+#menu-toggle, #burger {
+    display: none;
 }
 
 header img {
-    height: 2rem;
+    height: 100%;
+    max-height: 20px;
+    min-height: 10px;
+
+}
+
+.container {
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
-    color: inherit;
+    color:inherit;
     font-size: 0.9rem;
     text-decoration: none;
-    padding: 1.125rem 0.9375rem; /* 18px 15px */
-    position: relative;
+    padding: 1.2em 1em;
+    position:relative;
 }
+
 
 nav a:hover {
     color: #13486b;
+    
+}
+nav a:hover::before {
+    width:100%;
 }
 
-nav a.active {
-    color: #22577A;
+nav a::before {
+    transition:.3s;
+    content:"";
+    width:0;
+    height:2px;
+    background:#13486b;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
 }
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
 
 .hero-image {
     background-image: url('img-medlem/gallery1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh; /* Gör att bilden täcker hela skärmen */
-    width: 100%; /* Gör att bilden sträcker sig över hela bredden */
+    height: 60vh; 
+    width: 100%; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Ändra till column för att stapla elementen */
+    justify-content: center; /* Centrera vertikalt */
+    align-items: center; /* Centrera horisontellt */
     position: relative;
-    margin: 0; /* Se till att det inte finns något marginal */
-    padding: 0; /* Se till att det inte finns något padding */
 }
 
 .hero-image h1 {
+    color:white ;
     font-size: 3rem;
-    margin-bottom: 1.25rem; /* 20px */
+    margin-top: 7rem; /* Justera avståndet ovanför rubriken */
+    margin-bottom: 3rem; /* Justera avståndet */
 }
 
 .hero-image button {
     border: none;
     outline: none;
-    padding: 2rem 4rem; /* 15vh 30vh */
+    padding: 2rem 4rem; 
     font-size: 1rem;
     cursor: pointer;
     background-color: #13486b;
     color: white;
-    border-radius: 0.625rem; /* 5vh */
+    border-radius: 0.625rem; 
     transition: background 0.3s ease;
+    margin-top: 1rem; /* Lägg till avstånd ovanför knappen */
 }
 
 .hero-image button:hover {
@@ -101,7 +163,7 @@ main {
     gap: 5rem; /* 20vh */
 }
 
-.medal {
+.medal{
     border: 1px solid #ddd;
     padding: 2rem; /* 10vh */
     text-align: center;
@@ -209,10 +271,11 @@ button {
     background: #333;
     color: #fff;
     border: none;
-    border-radius: 0.3125rem; /* 5vh */
+    border-radius: 5px; /* Rundade hörn */
+    transition: background-color 0.3s; /* Smidig övergång */
     cursor: pointer;
     font-size: 1rem; /* Justera storlek */
-    transition: background 0.3s ease;
+ 
 }
 
 button:hover {
@@ -262,12 +325,17 @@ button:hover {
 }
 
 footer {
-    background-color: #22577A;
+    flex: 4;
+    background-color: #244034;
     width: 100%;
+    left: 0;
+    bottom: 0;
+    position:static;
     justify-content: center;
     color: #fff;
     text-shadow: 1px 1px 3px black;
 }
+
 
 .content {
     display: flex;
@@ -325,9 +393,10 @@ footer a {
 
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
     .hero-image h1 {
         font-size: 2.5rem;
+        margin-top: 5rem;
     }
 
     .hero-image button {
@@ -351,29 +420,51 @@ footer a {
         font-size: 1.75rem;
     }
 
-    .text h2 {
+    .text h2, .text h3 {
         font-size: 1.5rem;
-    }
-
-    .text h3 {
-        font-size: 1.25rem;
-    }
-
-    button {
-        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 768px) {
     .hero-image {
-        height: 50vh; /* Minska höjd */
+        height: 50vh;
     }
 
     .hero-image h1 {
         font-size: 2rem;
     }
 
-    /* .hero-image button {
-    padding 
-    } */
+    .hero-image button {
+        padding: 1rem;
+    }
+
+    .part1 {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .medal {
+        padding: 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 1.75rem;
+    }
+}
+/* Media Queries */
+
+@media (min-width: 769px) {
+    .hero-image {
+        height: 60vh; /* Standard för större skärmar */
+    }
+
+    .part1 {
+        display: flex;
+        justify-content: center;
+        gap: 5rem; /* Justera avståndet */
+    }
+
+    .medal {
+        padding: 2rem; /* Större padding på större skärmar */
+    }
 }
