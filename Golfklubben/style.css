@@ -140,7 +140,7 @@ main {
 
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 
@@ -358,6 +358,7 @@ h4 {
 
 
 #member button,.hero-image button,
+.hero-content-start .button,
 .news-item .button, 
 .memberships .button,
 #event button,
@@ -549,7 +550,7 @@ article {
     background-color: #fff;
     border: 0.1em solid #b6e0cea6;
     min-width: 250px;
-    font-size: 0.9em;
+    min-height: 400px;
 }
 
 #start .buttonbox {
@@ -564,14 +565,14 @@ article {
 
 #start time {
     font-style: italic;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: block;
     text-align: center;
     color: #34614d;
 }
 
 #start .heading {
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
     background-color: #b6e0cea6;
     width: 100%;
 }
@@ -582,15 +583,16 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em;
+    padding: 0.7rem;
     width: 100%;
 }
 
 #start .memberships {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 4px;
-    padding: 0.2em;
+    padding: 0.2rem;
+    min-height: 400px;
 }
 
 #start .price {
@@ -603,7 +605,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+
     gap: 0.4em;
     height: 100%;
 }
@@ -842,7 +844,7 @@ footer h4 {
 @media only screen and (max-width: 980px) {
 
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     footer {
@@ -1075,7 +1077,7 @@ footer h4 {
     }
 
     .hero-content-start p {
-        font-size: 1em;
+        font-size: 1rem;
         max-width: 90%;
     }
 

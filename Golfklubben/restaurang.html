@@ -65,7 +65,7 @@
     <div id="wrapper">
         <main id="restaurant">
             <article class="pagehead">
-                <h2 class="full-width">Restaurang och shop</h2>
+                <h2>Restaurang och shop</h2>
                 <section class="shop-info">
                     <h3>Elite-shoppen:</h3>
                     <p>
@@ -237,62 +237,97 @@
                     </section>
                 </div>
             </article>
-            <article class="reservation">
-                <form id="table-reservation" novalidate>
-                    <h2>Bordsbokning</h2>
-                    <fieldset>
-                        <label for="reserver">Namn: *</label>
-                        <input 
-                            type="text" 
-                            id="reserver" 
-                            name="name" 
-                            required
-                            minlength="2"
-                            maxlength="50"
-                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
-                            placeholder="Ange ditt fullständiga namn"
-                        >
-                        <label for="people">Antal: *</label>
-                        <select name="people" id="people" required>
-                            <option value="">Välj antal personer</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="">Är ni fler än 10, ring restaurangen.</option>
-                        </select>
-
-                        <label for="reservation-phone">Telefonnummer: *</label>
-                        <input 
-                            type="tel" 
-                            id="reservation-phone" 
-                            name="tel"
-                            required
-                            pattern="[0-9+\s-]{6,}"
-                            placeholder="t.ex. 070-123 45 67"
-                            title="Ange ett giltigt telefonnummer"
-                        >
+            <article class="info-section">
+                <h3>Hör av dig till oss!</h3>
+                <div class="reservation-and-chefs">
+                    <form id="table-reservation" novalidate>
+                        <h3>Bordsbokning</h3>
+                        <fieldset class="first">
+                            <label for="reserver">Namn: *</label>
+                            <input 
+                                type="text" 
+                                id="reserver" 
+                                name="name" 
+                                required
+                                minlength="2"
+                                maxlength="50"
+                                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
+                                placeholder="Ange ditt fullständiga namn"
+                            >
+                            <label for="people">Antal: *</label>
+                            <select name="people" id="people" required>
+                                <option value="">Välj antal personer</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="">Är ni fler än 10, ring restaurangen.</option>
+                            </select>
+    
+                            <label for="reservation-phone">Telefonnummer: *</label>
+                            <input 
+                                type="tel" 
+                                id="reservation-phone" 
+                                name="tel"
+                                required
+                                pattern="[0-9+\s-]{6,}"
+                                placeholder="t.ex. 070-123 45 67"
+                                title="Ange ett giltigt telefonnummer"
+                            >
+                            </fieldset>
+                            <fieldset>
+                            <label for="message-box">Meddelande: *</label>
+                            <textarea 
+                                id="message-box" 
+                                name="message-box" 
+                                rows="9" 
+                                required
+                                minlength="5"
+                                maxlength="500"
+                                placeholder="Speciella önskemål, kostval, allergier eller annat.."
+                            ></textarea>
+                            <input type="submit" id="submit-button" value="Skicka">
                         </fieldset>
-                        <fieldset>
-                        <label for="message-box">Meddelande: *</label>
-                        <textarea 
-                            id="message-box" 
-                            name="message-box" 
-                            rows="6" 
-                            required
-                            minlength="5"
-                            maxlength="500"
-                            placeholder="Speciella önskemål, kostval, allergier eller annat.."
-                        ></textarea>
-                        <input type="submit" id="submit-button" value="Skicka">
-                    </fieldset>
-                </form>
+                    </form>
+                    <section class="chefs-info">
+                        <h3>Vi som jobbar på Restaurang Elite</h3>
+                        <div class="imgbox">
+                            <figure>
+                                <figcaption>
+                                    <strong>Mats</strong> är kökschefen som brinner för att skapa säsongsbaserade menyer med 
+                                    lokala råvaror. Med över 20 års erfarenhet i branschen har han en passion för att 
+                                    kombinera traditionell svensk matlagning med moderna influenser. Hans signaturrätt är vår lasagne 
+                                    som älskas av både gäster och personal.
+                                </figcaption>
+                                <img src="img-restaurang-shop/chef1.png" alt="En kock som står som tittar ned på en skärbräda full med grönsaker">
+                            </figure>
+                            <figure>
+                                <figcaption>
+                                    <strong>Elin</strong> är dessertkocken som lägger ner sin själ i varje söt kreation. 
+                                    Med en bakgrund inom konditori och en förkärlek för vackra detaljer, skapar hon efterrätter 
+                                    som är lika fina att se på som de är att äta. Hennes mest populära rätt är vår hembakta cheesecake 
+                                    med vit choklad och blåbärssås.
+                                </figcaption>
+                                <img src="img-restaurang-shop/chef2.jpg" alt="En kock som står med armarna i kors och tittar in i kameran">
+                            </figure>
+                            <figure>
+                                <figcaption>
+                                    <strong>Fredrik</strong> Fredrik är restaurangens grillmästare och expert på att skapa perfekt 
+                                    grillade rätter. Med en kreativ twist på varje måltid ger han gästerna en smakupplevelse utöver det vanliga. 
+                                    Hans specialitet är våra grillade kycklingspett med ris och säsongens grönsaker som tillagas till 
+                                    perfektion varje gång.
+                                </figcaption>
+                                <img src="img-restaurang-shop/chef4.jpg" alt="En kock som lägger upp mat på ett fat">
+                            </figure>
+                        </div>
+                    </section>
+                </div>
             </article>
         </main>
     </div>
