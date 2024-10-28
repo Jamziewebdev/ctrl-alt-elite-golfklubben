@@ -1,0 +1,446 @@
+/* Grundläggande stil för hela sidan */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #38a3a5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #34495e;
+}
+
+section {
+  margin: 2rem auto;
+  width: 80%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
+
+/* form {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* label {
+  margin-top: 0.5rem;
+}
+
+input, select, button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #2ecc71;
+} */
+
+/* Grundläggande stil för tabellen */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+thead {
+  background-color: #34495e;
+  color: white;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+td {
+  color: #2c3e50;
+}
+
+
+/* Styling för header och nav-bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 1rem;
+}
+
+header img {
+  width: 150px; /* Storlek på logotypen */
+}
+
+nav a {
+  color:inherit;
+  font-size: 0.9rem;
+  /* Tar bort webbläsarens default-stilar för länkar,
+  typ understreck och blå färg */
+  text-decoration: none;
+  /* sätter padding över och under till 18 pixlar, 
+  och höger och vänster till 25 pixlar.*/
+  padding: 18px 15px;
+  position:relative;
+}
+
+nav a:hover {
+  /* Vid hovring får navigationslänkarna en färg */
+  color: #13486b;
+  
+}
+nav a:hover::before {
+  width:100%;
+}
+nav a::before{
+  transition:.3s;
+  content:"";
+  width:0;
+  height:2px;
+  background:#13486b;
+  position:absolute;
+  bottom:8px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+nav a.active {
+  /* När en navigationslänk är vald, alltså den länk som motsvarar
+  den sida man just nu är på, så blir den blå.*/
+  color: #22577A;
+}
+
+footer {
+  flex: 4;
+  background-color: #22577A;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position:static;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px black;
+
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+footer p, address {
+  margin: 0, 0.3rem;
+  
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+.shortcuts a:hover {
+  border-bottom: 1px solid #e6ffe8;
+}
+
+.social-media h4 {
+  margin-bottom: 8px;
+}
+.social-media {
+  width: 120px;
+  height: 120px;
+
+}
+
+
+  /* Skugga när man hovrar */
+.social-media img:hover {
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.newsform input[type=email] {
+  width: 90%;
+  margin: 5px 0;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #5e5e5e;
+}
+
+.newsform input[type=submit] {
+  display: inline-block;
+  font-family: 'Poppins', Times, serif;
+  background-color: #34775a;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 5px 0;
+  padding: 10px 25px;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px black;
+  transition: .3s;
+}
+
+.newsform input[type=submit]:hover {
+  background-color: #34614d;
+}
+
+#upcoming-events h2 {
+  text-align: center;
+  color: #34614d;
+  text-transform: uppercase;
+}
+
+#past-competitions h2 {
+  text-align: center;
+  color: #34614d;
+  text-transform: uppercase;
+}
+/* Event */
+
+.event-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item-container {
+  position: relative;
+  margin: 24px;
+  width: 320px;
+  height: 570px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 30 5px rgba(0, 0, 0, 0.30);
+  cursor: pointer;
+}
+
+.img-container,
+.body-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.body.container {
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(27, 26, 26, 0.671);
+  opacity: 0;
+  transition: height linear 0.4s, opacity linear 0.2s;
+}
+
+.item-container:hover .overlay {
+  opacity: 1;
+  height: 150px;
+}
+
+.info-event {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.name,
+.pris {
+  color: #34775a;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 12px;
+  text-transform: uppercase;
+}
+.finished {
+  color: #e90000;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 12px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.info {
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.separator {
+  width: 50%;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #000000;
+  margin-bottom: 16px;
+}
+
+.extra-info {
+  border-top: 1px solid #bbb;
+  margin-top: 12px;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.extra-info info {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.info i {
+  color: #34775a;
+  font-size: 1.1em;
+  margin-right: 4px;
+}
+
+.info span {
+  color: rgb(11, 54, 196);
+}
+
+.action {
+  color: #f7f7f7;
+  border: 3px solid #34775a;
+  background-color: transparent;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  outline: none;
+  cursor: pointer;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: background-color 0.4s, top 0.4s;
+}
+
+.item-container:hover .action {
+  top: 50px;
+}
+
+.action:hover {
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+/* Styling för formulär på anmälningssidan */
+
+.formbody {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.7)), url(img/login_bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.loginbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 420px;
+  box-sizing: border-box;
+  background: rgba(12, 31, 13, 0.726);
+}
+
+
+.loginbox h2 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #34775a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #f7f7f7;
+}
+
+.loginbox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="text"],
+.loginbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #f7f7f7;
+  background: transparent;
+  outline: none;
+  color: #f7f7f7;
+}
+
+
+::placeholder {
+  color: #fff;
+}
+
+.registerbtn {
+  border-radius: 10px;
+  outline:#fff;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  background: #34614d;
+}
+
+
