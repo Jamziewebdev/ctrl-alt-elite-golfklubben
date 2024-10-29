@@ -221,12 +221,6 @@ h4 {
 }
 
 
-/* --- Huvudrubrik medlemssida --- */
-
-#member h1 {
-    text-align: center;
-    color: #333;
-}
 
 /* --- Rubriker på evenemang och resultatsidor --- */
 
@@ -235,62 +229,9 @@ h4 {
     text-align: left;
 }
 
-/* --- Huvudrubrik sektion medlemssida --- */
-
-#member .text h1 {
-    color: #b29900; /* Guldaktig färg för rubriken */
-    font-size: 32px; /* Stor rubrik */
-    font-weight: bold; /* Fetstil för att framhäva rubriken */
-    margin-bottom: 15px; /* Utrymme under rubriken */
-}
-
-/* --- Underrubrik sektion medlemssida --- */
-
-#member .text h2 {
-    color:  #C0C0C0; /* Guldaktig färg för rubriken */
-    font-size: 32px; /* Stor rubrik */
-    font-weight: bold; /* Fetstil för att framhäva rubriken */
-    margin-bottom: 15px; /* Utrymme under rubriken */
-}
-
-/* --- Underrubrik sektion medlemssida --- */
-
-#member .text h3 {
-    color: #Cd7f32; /* Guldaktig färg för rubriken */
-    font-size: 32px; /* Stor rubrik */
-    font-weight: bold; /* Fetstil för att framhäva rubriken */
-    margin-bottom: 15px; /* Utrymme under rubriken */
-}
-
-/* --- Textstorlek sektion medlemssida --- */
-
-#member .text p {
-    color: #333; /* Mörk textfärg för bra kontrast */
-    font-size: 16px; /* Standardstorlek på brödtext */
-    line-height: 1.6; /* Bra radavstånd för läsbarhet */
-    margin-bottom: 15px; /* Mellanrum mellan stycken */
-}
-
-/* --- Animationsstilar? för text medlemssida --- */
-
-#member .text p::before {
-    content: "✓ "; /* Symbol för att markera varje punkt */
-    color: #b29900; /* Guldfärg för symbolen */
-    font-weight: bold; /* Fetstil för symbolen */
-}
-
-/* --- Hero-imagerubrik medlemssida och start --- */
-
-#member .hero-image h1, .hero-image-start h1 {
+.hero-image-start h1 {
     font-size: 3rem; /* Stor rubrik */
     margin-bottom: 20px;
-}
-
-/* --- Hero-imagetext startsida --- */
-
-.hero-content-start p {
-    font-size: 1rem;
-    margin-bottom: 40px;
 }
 
 /* --------------- Stilar för hero-images --------------- */
@@ -337,27 +278,12 @@ h4 {
     
 }
 
-/* --- Hero-image medlemssida --- */
-
-#member .hero-image {
-    background-image: url('img/vyer/gallery1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
 /* --------------- Knappstilar --------------- */
 
 /* --- Knappstilar för start- och evenemangssidor --- */
 
 
-#member button,.hero-image button,
+.hero-image button,
 .hero-content-start .button,
 .news-item .button, 
 .memberships .button,
@@ -665,90 +591,6 @@ article {
     cursor: grab;
 }
 
-
-
-/* --- Artikel-, sektions-, formulär-, och containerstilar för medlemssidan --- */
-
-#member .part1 {
-    display: flex;           /* Använder flexbox */
-    justify-content: center; /* Centrerar innehållet horisontellt */
-    gap: 20px;               /* Lägger till mellanrum mellan elementen */
-}
-
-#member .medal {
-    border: 1px solid #ddd;  /* Valfri stil, t.ex. kant runt varje block */
-    padding: 10px;
-    text-align: center;
-}
-
-#member .img img {
-    width: 300px;            /* Justera bildstorleken */
-    height: 300px;
-}
-
-#member .text {
-    background-color: #f4f4f4; /* Lätt bakgrundsfärg för att framhäva texten */
-    border-radius: 8px; /* Rundade hörn */
-    padding: 20px; /* Ger utrymme mellan texten och kantlinjerna */
-    margin: 20px 0; /* Utrymme mellan textblocken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
-}
-
-#member .medlem {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Grundläggande stil för formulär */
-#member form {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Fältset-styling */
-#member fieldset {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-/* Legend-styling */
-#member legend {
-    font-weight: bold;
-    color: #444;
-}
-
-/* Formulärfälten */
-#member label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: 600;
-}
-
-#member input, #member textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-
-/* Radioknappens stil */
-#member input[type="radio"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-/* Anpassningar för textområden */
-#member textarea {
-    resize: vertical;
-}
 
 
 /* ---------- Stilar för sidfot ---------- */
