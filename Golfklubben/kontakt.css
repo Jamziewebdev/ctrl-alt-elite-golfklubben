@@ -1,16 +1,25 @@
-/* --- Huvudrubrik kontaktsida --- */
+/* --- Stilar för rubriker kontaktsida --- */
 
 #contact article h1 {
     margin: auto;
     padding: 10px;
 }
 
-/* --- Artikel-, sektions-, och formulärstilar för kontaktsidan --- */
-
 #contact h1, #contact h2 {
     color: #34775a;
     text-align: left;
 }
+
+#contact h4 {
+    color: #244034;
+}
+
+/* --- Mittcentrerar rubriken "Vi som jobbar på Elite Golf:" --- */
+.h2-jobbar {
+    margin: auto;
+}
+
+/* --- Artikel-, sektions-, och formulärstilar för kontaktsidan --- */
 
 #contact article {
     height: 100%;
@@ -18,7 +27,7 @@
     flex-direction: row;
     background-color: transparent;
     border: none;
-    margin: 15px;
+    
 }
 
 #contact article section {
@@ -75,18 +84,7 @@
     margin-right: 10px;
 }
 
-#contact .bokning {
-    margin: 30px 0 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* --- Stilar för bilder och iframes i sektioner på kontaktsida --- */
-
-#contact section img {
-    width: 50%;
-}
+/* --- Stilar för bilder på kontaktsida --- */
 
 #contact .klubbhus {
     margin: auto;
@@ -96,6 +94,7 @@
 #contact section img {
     margin: auto;
     margin-bottom: 20px;
+    width: 50%;
 }
 
 /* --- Knappstilar för kontaktsida --- */
@@ -126,6 +125,15 @@
     background-color: #34614d;
 }
 
+/* --- Stilar för container med bokningslänk ---*/
+
+#contact .bokning {
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* --- Stilar för bokningslänk på kontaktsidan --- */
 
 #contact .bokning a{
@@ -148,6 +156,8 @@
     background-color: #34614d;  
 }
 
+/* --- Responsivitet för kontaktsidan --- */
+
 @media only screen and (max-width: 768px) { 
 
     #contact article {
@@ -157,8 +167,6 @@
 
     #contact article section {
         margin: 3px;
-        text-align: center;
-        
     }
 
     #contact article section h4 {
@@ -170,5 +178,3 @@
     }
 
 }
-
-/* ---  --- */
