@@ -435,7 +435,7 @@ article {
     background-color: #e6ffe8;
 }
 
-.omul {
+ #about .omul {
     list-style-position: inside;
 }
 
@@ -452,7 +452,7 @@ article {
 
 #about section img, 
 #about section iframe {
-    width: 50%;
+    width: 100%;
 }
 
 /* --- Artikel-, sektions-, list-, tabell-, och formulärstilar för evenemangs- och resultatisdorna --- */
