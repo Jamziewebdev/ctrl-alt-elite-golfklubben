@@ -221,14 +221,6 @@ h4 {
 }
 
 
-
-/* --- Rubriker på evenemang och resultatsidor --- */
-
-#event h1, #event h2, #event h3, #event h4, 
-#result h1, #result h2, #result h3, #result h4 {
-    text-align: left;
-}
-
 .hero-image-start h1 {
     font-size: 3rem; /* Stor rubrik */
     margin-bottom: 20px;
@@ -287,7 +279,6 @@ h4 {
 .hero-content-start .button,
 .news-item .button, 
 .memberships .button,
-#event button,
 #restaurant #submit-button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -323,19 +314,9 @@ button:hover,
 .news-item .button:hover, 
 .memberships .button:hover,
 .hero-content-start .button:hover, 
-#event button:hover,
 #restaurant #submit-button:hover {
     background-color: #34614d;
 }
-
-/* --- Knappstilar för evenemangssidan --- */
-
-#event button {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.5rem;
-}
-
 
 /* --------------- Artikel-, containers-, formulär-, och sektionsstilar --------------- */
 
@@ -377,69 +358,6 @@ article {
     width: 50%;
 }
 
-/* --- Artikel-, sektions-, list-, tabell-, och formulärstilar för evenemangs- och resultatisdorna --- */
-
-#event section, #result section {
-    margin: 2rem auto;
-    width: 80%;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Liststilar för evenemang och resulat --- */
-#event ul, #result ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#event li, #result li {
-    margin-bottom: 1.5rem;
-}
-
-#event form, #result form {
-    display: flex;
-    flex-direction: column;
-}
-
-#event label, #result label {
-    margin-top: 0.5rem;
-}
-
-#event input, #result input, 
-#result select, #event select {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#result table, #event table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-}
-
-#result thead, #event thead {
-    background-color: #34495e;
-    color: white;
-}
-
-#result th, #result td, 
-#event th, #result td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-#result tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-#result tbody tr:hover {
-    background-color: #ddd;
-}
 
 /* --- Artikel-, sektions-, och containerstilar för startsidan --- */
 
@@ -715,9 +633,6 @@ footer h4 {
 
     /* ----------------- Egna stilar för bokningssida ----------------- */
 
-    /* ----------------- Egna stilar för evenemangssida ----------------- */
-
-    /* ----------------- Egna stilar för resultatsida ----------------- */
 
     /* ----------------- Egna stilar för greenfeesida ----------------- */
 
@@ -835,10 +750,6 @@ footer h4 {
 
     /* ----------------- Egna stilar för bokningssida ----------------- */
 
-    /* ----------------- Egna stilar för evenemangssida ----------------- */
-
-    /* ----------------- Egna stilar för resultatsida ----------------- */
-
     /* ----------------- Egna stilar för greenfeesida ----------------- */
 
     /* ----------------- Egna stilar för kontaktsida ----------------- */
@@ -929,7 +840,6 @@ footer h4 {
 
     /* ----------------- Egna stilar för evenemangssida ----------------- */
 
-    /* ----------------- Egna stilar för resultatsida ----------------- */
 
     /* ----------------- Egna stilar för greenfeesida ----------------- */
 
