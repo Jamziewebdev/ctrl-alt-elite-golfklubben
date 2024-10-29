@@ -353,11 +353,14 @@ article {
 
 /* --- Stilar för bilder och iframes i sektioner på om oss-sida --- */
 
-#about section img, 
-#about section iframe {
-    width: 50%;
+#about .omul {
+    list-style-position: inside;
 }
 
+#about section img, 
+#about section iframe {
+    width: 100%;
+}
 
 /* --- Artikel-, sektions-, och containerstilar för startsidan --- */
 
