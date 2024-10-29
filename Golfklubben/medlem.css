@@ -151,7 +151,7 @@ label {
     font-weight: 600;
 }
 
-input, textarea {
+#registration-form input, #registration-form textarea {
     width: calc(100% - 20px);
     padding: 0.625rem; /* 10vh */
     border: 1px solid #ccc;
@@ -163,7 +163,7 @@ input, textarea {
 /* Knappar */
 button {
     padding: 1rem; /* 15vh */
-    background: #333;
+    background: #34775a;
     color: #fff;
     border: none;
     border-radius: 5px; /* Rundade hörn */
@@ -218,81 +218,130 @@ button:hover {
     display: block;
 }
 
+.membership-sites p {
+    margin-bottom: 1em;
+}
+
 .membership-sites h3 {
     margin-bottom: 1em;
 }
 
 .membership-sites h4 {
-    margin-bottom: 0.5em;
-}
-
-table {
-    border-radius: 4px;
+    margin: 0.5em 0;
     width: 100%;
-    background-color: #f0f8f5;
-    border: 1px solid rgba(0, 0, 0, 0.24);
 }
 
-th {
-    text-align: left;
-    background-color: #c2dbcd;
+#forum {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+}
+
+
+#table-container {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #34775a;
+    border-radius: 4px;
+    margin-top: 1em;
+}
+
+#table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#table-container::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
+}
+
+
+#table-container::-webkit-scrollbar-thumb {
+    background: #34775a;
+    border-radius: 2px;
+
+}
+
+#table-container::-webkit-scrollbar-track {
+    background: #f3f3f3;
+    box-shadow: inset 0 0 5px #aaaaaa;
+    border-radius: 2px;
+}
+
+th:first-child,
+th:last-child {
+    max-width: 150px;
+}
+
+tr:first-child {
+    position: sticky;
+    top: 0;
+    background-color: #34775a;
+    color: #fff;
+    height: 50px;
+}
+
+tr:nth-child(even) {
+    background-color: #34775a49;
+}
+
+
+td {
+    height: 50px;
     padding: 5px;
 }
 
-td {
+td a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td:first-child {
+    font-size: 0.9em;
     text-align: center;
 }
 
-table a {
-    padding-top: 5px;
-    color: #000;
-    text-decoration: none;
+
+
+td:nth-child(2) {
+    font-weight: 400;
 }
 
-table a:hover {
-    text-decoration: underline;
 
-}
-.poster {
-    align-items: center;
+td:last-child {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
 
 }
-
-.poster p, .posts p, .thread p, .timestamp p {
-    margin: 1em 0;
-    font-size: 1em;
-}
-
-
-tr:not(:first-child):hover {
-    background-color: #7bb495;
-}
-
 
 
 @media only screen and (max-width: 980px) {
+    
 
-    body {
-        font-size: 12px;
-    }
 
-    footer {
-        padding-bottom: 1em;
+    td:first-child {
+        text-align: left;
     }
 
 }
 
+
 @media only screen and (max-width: 768px) {
-    .hero-image {
+    .hero-image-member {
         height: 50vh;
     }
 
-    .hero-image h1 {
+    .hero-image-member h1 {
         font-size: 2rem;
     }
 
-    .hero-image button {
+    .hero-image-member button {
         padding: 1rem;
     }
 
@@ -308,21 +357,22 @@ tr:not(:first-child):hover {
     .text h1 {
         font-size: 1.75rem;
     }
+
+    .part2 {
+        flex-direction: column;
+    }
+
 }
 
 /* Media Queries */
 @media only screen and (max-width: 480px) {
-    .hero-image h1 {
+    .hero-image-member h1 {
         font-size: 2.5rem;
         margin-top: 5rem;
     }
 
-    .hero-image button {
+    .hero-image-member button {
         padding: 1rem 2rem;
-    }
-
-    main {
-        padding: 1rem;
     }
 
     .part1 {
