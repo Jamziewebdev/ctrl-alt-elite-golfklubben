@@ -361,10 +361,6 @@ article {
     background-color: #e6ffe8;
 }
 
- #about .omul {
-    list-style-position: inside;
-}
-
 
 #about article section {
     display: flex;
@@ -378,7 +374,7 @@ article {
 
 #about section img, 
 #about section iframe {
-    width: 100%;
+    width: 50%;
 }
 
 /* --- Artikel-, sektions-, list-, tabell-, och formulärstilar för evenemangs- och resultatisdorna --- */
@@ -590,6 +586,7 @@ article {
 #start .newsfeed::-webkit-scrollbar-thumb:hover {
     cursor: grab;
 }
+
 
 
 

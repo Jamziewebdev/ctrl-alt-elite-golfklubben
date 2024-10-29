@@ -36,14 +36,6 @@
     background-color: #090a0a;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem; /* Justera padding */
-    row-gap: 2rem; /* 5vh */
-}
-
 .part1 {
     display: flex;
     justify-content: center;
@@ -292,15 +284,15 @@ tr:not(:first-child):hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .hero-image {
+    .hero-image-member {
         height: 50vh;
     }
 
-    .hero-image h1 {
+    .hero-image-member h1 {
         font-size: 2rem;
     }
 
-    .hero-image button {
+    .hero-image-member button {
         padding: 1rem;
     }
 
