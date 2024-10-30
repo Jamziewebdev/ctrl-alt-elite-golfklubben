@@ -231,7 +231,7 @@ h4 {
 /* --- Hero-image startsida --- */
 
 .hero-image-start {
-    background-image: url("img/vyer/hero.jpg");
+    background-image: url("images/start/hero.jpg");
     width: 100%;
     height: 60vh;
     max-height: 600px;

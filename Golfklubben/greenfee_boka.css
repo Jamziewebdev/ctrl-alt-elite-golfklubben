@@ -1,6 +1,6 @@
 
 .hero-image-boka {
-    background-image: url("img/vyer/hero.jpg");
+    background-image: url("images/Start/hero.jpg");
     width: 100%;
     height: 400px;
     background-position: center;
@@ -128,7 +128,7 @@ ul li{
 .arrow-button, .arrow-button:hover {
     height: 40px;
     width: 40px;
-    background-image: url("img-booking/icons8-arrow-50\ \(2\).png");
+    background-image: url("Images/Booking/arrow.png");
     background-size: cover;
     background-color: transparent;
     cursor: pointer;

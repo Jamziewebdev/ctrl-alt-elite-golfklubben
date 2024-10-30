@@ -33,13 +33,13 @@
 }
 
 #hero-slideshow .one {
-    background-image: url("img-restaurang-shop/restaurant.jpeg");
+    background-image: url("images/restaurant-shop/restaurant.jpeg");
     opacity: 1;
     animation: heroAnim 20s infinite;
 }
 
 #hero-slideshow .two {
-    background-image: url("img-restaurang-shop/shop4.jpg");
+    background-image: url("images/restaurant-shop/shop4.jpg");
     animation: heroAnim 20s infinite 10s;
 }
 

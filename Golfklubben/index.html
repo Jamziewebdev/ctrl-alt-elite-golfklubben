@@ -11,10 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
     <title>Elite Golf - Start</title>
-    <link rel="icon" type="image/x-icon" href="/img/logotyp/golfboll.svg">
+    <link rel="icon" type="image/x-icon" href="Images/logotype/favicon-golfboll.svg">
 </head>
 <body>
     <header>
+        <!-- Sidhuvudet innehåller vårt navigationsfält, som jag har byggt upp med hjälp av länkar.
+        Checkboxen och labeln är dold på stora skärmar, men blir på mindre skärmar synlig som hamburgermeny-->
         <input type="checkbox" id="menu-toggle">
         <label id="burger" for="menu-toggle">
             <span></span>
@@ -22,7 +24,7 @@
             <span></span>
         </label>
         <div class="container">
-            <a href="index.html"><img src="img/logotyp/logo-elite-golf-01.svg" alt="Logotyp och hemknapp Elite golf"></a>
+            <a href="index.html"><img src="images/logotype/logotyp-elite-golf.svg" alt="Logotyp och hemknapp Elite golf"></a>
             <nav>
                 <a href="restaurang.html">Restaurang & Shop</a>
                 <a href="medlem.html">Medlem</a>
@@ -34,6 +36,7 @@
             </nav>
         </div>
     </header>
+    <!-- En hero image med välkomsttext för att välkomna besökare -->
     <div class="hero-image-start">
         <div class="hero-overlay-start"></div>
         <div class="hero-content-start">
@@ -53,6 +56,11 @@
             <article>
                 <h2>På gång hos Elite</h2>
                 <div class="newsfeed">
+                    <!-- Nyhetsflöde. Uppbygt genom använding av flexbox. Består av flera lådor med alternerande
+                    flödesriktning (row/direction) för att få till den slutliga designen.
+                    Byggd responsiv i grunden för att passa bra både på små och stora skärmar utan att behöva
+                    göra några större förändringar i media quereys. Denna design/struktur är också grunden till
+                    medlemsinformationen nedan, samt menyerna på restaurangsidan. -->
                     <section class="news-item">
                         <div class="heading">
                             <h3>Sommarschemat är här!</h3>
@@ -64,7 +72,7 @@
                                 Vårt späckade sommarschema är här! Njut av längre speltider, 
                                 roliga tävlingar och härliga after work-häng. 
                                 Och du missar väl inte våra populära kvällsrundor? Välkommen!</p>
-                            <img src="img/vyer/summerpic.jpg" alt="En golfbana på sommaren" loading="lazy">
+                            <img src="images/environmental-images/summerpic.jpg" alt="En golfbana på sommaren" loading="lazy">
                         </div>
                         <div class="buttonbox">
                             <a class="button" href="evenemang.html">Evenemang</a>
@@ -79,7 +87,7 @@
                         <div class="news-content">
                             <p>Är du redo att koras till klubbmästare? Anmälan till årets mest prestigefyllda tävling är öppen nu! 
                                 Tävla mot andra golfentusiaster och vinn fina priser, delta i aktiviteter och ät god mat!</p>
-                            <img src="img/vyer/tavling.jpg" alt="Person som slår ut en golfboll ur sandgropen" loading="lazy">
+                            <img src="images/environmental-images/tavling.jpg" alt="Person som slår ut en golfboll ur sandgropen" loading="lazy">
                         </div>
                         <div class="buttonbox">
                             <a class="button" href="evenemang.html">Evenemang</a>
@@ -95,7 +103,7 @@
                             <p>Nu kan du ta del av veckans lunchmeny på restaurangen! Som vanligt finns det alternativ för alla.
                                 Extra bra pris för dig som är medlem! Kvällstid finns vår a'la carté-meny som alltid.
                             </p>
-                            <img src="img/vyer/buffetfood.jpg" alt="Ett bord fullt med mat" loading="lazy">
+                            <img src="images/restaurant-shop/buffetfood.jpg" alt="Ett bord fullt med mat" loading="lazy">
                         </div>
                         <div class="buttonbox">
                             <a class="button" href="restaurang.html">Meny</a>
@@ -112,7 +120,7 @@
                                 Uppgradera din golfgarderob! I vår shop hittar du nu det senaste inom golfmode från kända märken.
                                 Besök oss och hitta din nya favorittröja eller keps. Vi har något för alla!
                             </p>
-                            <img src="img/vyer/t-shirts.jpg" alt="En rad med t-shirts" loading="lazy">
+                            <img src="images/restaurant-shop/t-shirts.jpg" alt="En rad med t-shirts" loading="lazy">
                         </div>
                         <div class="buttonbox">
                             <a class="button" href="om.html">Öppettider</a>
@@ -131,7 +139,7 @@
                                 man kan vila och umgås under sin runda. Vi har även rustat upp våra bunkrar, och uppgraderat
                                 gräset på ett antal ställen. Välkommen!
                             </p>
-                            <img src="img/vyer/bana.jpg" alt="En rad t-shirts" loading="lazy">
+                            <img src="images/Environmental-images/bana.jpg" alt="En rad t-shirts" loading="lazy">
                         </div> 
                         <div class="buttonbox">
                             <a class="button" href="boka.html">Boka</a>
@@ -149,7 +157,11 @@
                                 Vi hoppas att ni ser fram emot att se den nya banan lika mycket som vi gör!
                                 Här kommer en liten förhandsvisning för er som är nyfikna.
                             </p>
-                            <iframe src="https://www.youtube.com/embed/mKysd7txJSM?si=KyF65BPDLEwY5qQv" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/mKysd7txJSM?si=KyF65BPDLEwY5qQv" 
+                            title="YouTube video player" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen></iframe>
                         </div>
                         <div class="buttonbox">
                             <a class="button" href="boka.html">Boka</a>
@@ -213,6 +225,7 @@
             </article>
         </main>
     </div>
+    <!-- Sidfoten innehåller snabblänkar till alla sidor, samt ett formulär för att registrera sig till nyhetsbrevet och länkar till sociala medier -->
     <footer>
         <div class="container">
             <div class="content">
@@ -222,7 +235,7 @@
                     <p><a href="medlem.html">Medlem</a></p>
                     <p><a href="om.html">Om oss</a></p>
                     <p><a href="boka.html">Boka</a></p>
-                    <p><a href="greenfee.html"></a>Greenfee</p>
+                    <p><a href="greenfee.html">Greenfee</a></p>
                     <p><a href="evenemang.html">Evenemang & Tävlingar</a></p>
                     <p><a href="kontakt.html">Kontakt</a></p>
                 </div>
@@ -255,10 +268,10 @@
                 <div class="social-media">
                     <h4>Sociala medier</h4>
                     <p>
-                        <a href="#"><img src="img/ikoner/facebook.svg" height="44" alt=""></a>
-                        <a href="#"><img src="img/ikoner/instagram.svg" height="44" alt=""></a>
-                        <a href="#"><img src="img/ikoner/twitter.svg" height="44" alt=""></a>
-                        <a href="#"><img src="img/ikoner/linkedin.svg" height="44" alt=""></a>
+                        <a href="#"><img src="images/Social-media-icons/facebook.svg" height="44" alt="En klickbar ikon som föreställande Facebooks logga"></a>
+                        <a href="#"><img src="images/Social-media-icons/instagram.svg" height="44" alt="En klickbar ikon som föreställer Instagrams logga"></a>
+                        <a href="#"><img src="images/Social-media-icons/twitter.svg" height="44" alt="En klickbar ikon som föreställer Twitters logga"></a>
+                        <a href="#"><img src="images/Social-media-icons/linkedin.svg" height="44" alt="En klickbar ikon som föreställre LinkedIns logga"></a>
                     </p>
                 </div>
             </div>
