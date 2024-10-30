@@ -351,6 +351,11 @@ article {
     padding: 10px;
 }
 
+#about iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+}
+
 /* --- Stilar för bilder och iframes i sektioner på om oss-sida --- */
 
 #about .omul {
