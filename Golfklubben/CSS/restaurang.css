@@ -15,7 +15,6 @@
 }
 
 #hero-slideshow .slide {
-    background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -33,19 +32,23 @@
 }
 
 #hero-slideshow .one {
-    background-image: url("/Golfklubben/images/restaurant-shop/restaurant.jpeg");
+    background-image: url("https://i.imgur.com/bARsJ86.jpeg"), 
+    url("/Golfklubben/Images/Restaurant-shop/shop4.jpg");
     opacity: 1;
     animation: heroAnim 20s infinite;
+    background-size: cover;
 }
 
 #hero-slideshow .two {
-    background-image: url("/Golfklubben/images/restaurant-shop/shop4.jpg");
+    background-image: url("https://i.imgur.com/GIa39im.jpeg"),
+    url("/Golfklubben/Images/Restaurant-shop/restaurant.jpeg");
     animation: heroAnim 20s infinite 10s;
+    background-size: cover;
 }
 
 @keyframes heroAnim {
     0%{opacity:0;}
-    4%{opacity:0;}
+    4%{opacity:1;}
     46%{opacity:1;}
     50%{opacity:1;}
     100%{opacity:0;}
