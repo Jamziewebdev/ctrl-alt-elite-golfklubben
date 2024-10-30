@@ -1,15 +1,6 @@
 /* Stilmall för Basgrupp 3 'Ctr+Alt+Elite's första
 gemensamma webbplats, golfklubben. Skapad hösten 2024. */
 
-/* Färger:
-Bakgrund body: #C7F9CC (ljusgrön)
-Bakgrund header: #fff (vit)
-Textfärg i paragrafer: #000 (svart)
-Textfärg i knappar: #fff (vit) med textskugga "text-shadow: 1px 1px 3px black;".
-
-*/
-
-
 /* -------------------Globala stilar - stilar som gäller alla sidor. -------------------*/
 
 *   {
@@ -45,13 +36,8 @@ header {
     min-height: 5em;
     height: 100%;
     display: flex;
-    /* Flex direction row innebär att alla objekt i containern header
-    radar upp sig i horisontellt */
     flex-direction: row;
-    /* Täcker skärmen från sida till sida */
     width: 100%;
-    /* När man använder align items: center i flexbox så centreras
-    objekten vertikalt */
     align-items: center;
     background-color: white;
     
@@ -231,7 +217,7 @@ h4 {
 /* --- Hero-image startsida --- */
 
 .hero-image-start {
-    background-image: url("images/start/hero.jpg");
+    background-image: url("/Golfklubben/images/start/hero.jpg");
     width: 100%;
     height: 60vh;
     max-height: 600px;
@@ -272,8 +258,6 @@ h4 {
 
 /* --------------- Knappstilar --------------- */
 
-/* --- Knappstilar för start- och evenemangssidor --- */
-
 
 .hero-image button,
 .hero-content-start .button,
@@ -289,7 +273,6 @@ h4 {
     display: inline-block;
     width: 150px;
     max-width: 33%;
-    /* Ändrar till responsiva enheter */
     padding: 0.8em 1em;
     color: #fff;
     background-color: #34775a;
@@ -311,7 +294,7 @@ h4 {
 
 
 
-/* --- Hovringsstilar för knappar på start- och evenemangssidor */
+/* --- Hovringsstilar för knappar */
 
 button:hover, 
 .news-item .button:hover, 
@@ -346,7 +329,6 @@ article {
     background-color: #e6ffe8;
 }
 
-
 #about article section {
     display: flex;
     flex-direction: column;
@@ -355,10 +337,6 @@ article {
     padding: 10px;
 }
 
-#about iframe {
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-}
 
 /* --- Stilar för bilder och iframes i sektioner på om oss-sida --- */
 
@@ -369,6 +347,12 @@ article {
 #about section img, 
 #about section iframe {
     width: 100%;
+}
+
+
+#about iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
 }
 
 /* --- Artikel-, sektions-, och containerstilar för startsidan --- */
@@ -497,7 +481,6 @@ article {
 }
 
 
-
 #start .newsfeed::-webkit-scrollbar {
     height: 8px;
 }
@@ -577,7 +560,6 @@ footer h4 {
     width: 200px;
     max-width: 200px;
     height: 44px;
-
 }
 
 /* Skugga när man hovrar */
@@ -638,25 +620,6 @@ footer h4 {
         width: 50%;
         margin-bottom: 1em;
     }
-
-
-    /* ----------------- Egna stilar för startsida ----------------- */
-
-
-    /* ----------------- Egna stilar för bokningssida ----------------- */
-
-
-    /* ----------------- Egna stilar för greenfeesida ----------------- */
-
-    /* ----------------- Egna stilar för kontaktsida ----------------- */
-
-    /* ----------------- Egna stilar för medlemssida ----------------- */
-
-    /* ----------------- Egna stilar för om oss-sida ----------------- */
-
-    /* ----------------- Egna stilar för restaurang och shop-sida ----------------- */
-
-
 
 
 
@@ -760,22 +723,12 @@ footer h4 {
     }
     
 
-    /* ----------------- Egna stilar för bokningssida ----------------- */
-
-    /* ----------------- Egna stilar för greenfeesida ----------------- */
-
-    /* ----------------- Egna stilar för kontaktsida ----------------- */
-
-    /* ----------------- Egna stilar för medlemssida ----------------- */
-
     /* ----------------- Egna stilar för om oss-sida ----------------- */
 
     #about article {
         flex-direction: column;
     }
 
-
-    /* ----------------- Egna stilar för restaurang och shop-sida ----------------- */
 
 }
 
@@ -854,19 +807,5 @@ footer h4 {
     }
 
 
-    /* ----------------- Egna stilar för bokningssida ----------------- */
-
-    /* ----------------- Egna stilar för evenemangssida ----------------- */
-
-
-    /* ----------------- Egna stilar för greenfeesida ----------------- */
-
-    /* ----------------- Egna stilar för kontaktsida ----------------- */
-
-    /* ----------------- Egna stilar för medlemssida ----------------- */
-
-    /* ----------------- Egna stilar för om oss-sida ----------------- */
-
-    /* ----------------- Egna stilar för restaurang och shop-sida ----------------- */
 
 }
