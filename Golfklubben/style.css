@@ -279,7 +279,8 @@ h4 {
 .hero-content-start .button,
 .news-item .button, 
 .memberships .button,
-#restaurant #submit-button {
+#restaurant #submit-button,
+#about .button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
@@ -308,13 +309,16 @@ h4 {
     width: 65%;
 }
 
+
+
 /* --- Hovringsstilar för knappar på start- och evenemangssidor */
 
 button:hover, 
 .news-item .button:hover, 
 .memberships .button:hover,
 .hero-content-start .button:hover, 
-#restaurant #submit-button:hover {
+#restaurant #submit-button:hover,
+#about .button:hover {
     background-color: #34614d;
 }
 
@@ -690,14 +694,14 @@ footer h4 {
     }
     
     #menu-toggle:checked ~ #burger > span:nth-child(1) {
-        transform: translateY(1.4em) rotate(45deg);
+        transform: translateY(15px) rotate(45deg);
     }
 
     #menu-toggle:checked ~ #burger > span:nth-child(2) {
         opacity: 0;
     }
     #menu-toggle:checked ~ #burger > span:nth-child(3) {
-        transform: translateY(-1em) rotate(-45deg);
+        transform: translateY(-14px) rotate(-45deg);
     }
     
     #menu-toggle:checked ~ .container nav {
@@ -765,6 +769,11 @@ footer h4 {
     /* ----------------- Egna stilar för medlemssida ----------------- */
 
     /* ----------------- Egna stilar för om oss-sida ----------------- */
+
+    #about article {
+        flex-direction: column;
+    }
+
 
     /* ----------------- Egna stilar för restaurang och shop-sida ----------------- */
 
