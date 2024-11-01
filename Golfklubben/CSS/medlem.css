@@ -1,6 +1,5 @@
 .hero-image-member {
-    background-image: url("https://i.imgur.com/pjZTPf7.jpeg"),
-    url("/Golfklubben/Images/Member/member-hero.jpg");
+    background-image: url("../Images/Member/member-hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
