@@ -1,3 +1,5 @@
+#Golfklubben
+
 This repository contains a website created for a group project.
 
 The assignment was to create a modern, user friendly and informative website for a fictious golf club. It should attract both new and old members, as well as increase the clubs visibility and engagement online. The finished product should be fully responsive, accessible and have a clear visual identity, as well as basic SEO implementation. 
